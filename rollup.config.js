@@ -1,10 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import json from '@rollup/plugin-json'
+import json from 'rollup-plugin-json'
 import vue from 'rollup-plugin-vue'
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
-import { nodeResolve } from '@rollup/plugin-node-resolve'
+import nodeResolve from 'rollup-plugin-node-resolve'
+import babel from 'rollup-plugin-babel'
 
 const isDev = process.env.NODE_ENV !== 'production'
 

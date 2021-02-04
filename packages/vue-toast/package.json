@@ -1,5 +1,5 @@
 {
-  "name": "yan-vue-toast",
+  "name": "vue-toast",
   "version": "0.0.1",
   "description": "vue弹窗组件",
   "main": "dist/cjs/index.js",
@@ -9,7 +9,7 @@
     "build": "rollup -c",
     "del": "rimraf dist"
   },
-  "keywords": ["yan-vue-toast"],
+  "keywords": ["vue-toast"],
   "author": "vue12306@163.com",
   "license": "ISC"
 }

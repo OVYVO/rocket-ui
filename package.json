@@ -14,17 +14,22 @@
     "@storybook/addon-links": "^6.1.16",
     "@storybook/vue": "^6.1.16",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "lerna": "^3.22.1",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",
     "rollup": "^2.38.4",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^6.0.0",
+    "rollup-plugin-vue": "^5.1.9",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12"
   },
   "workspaces": [
-    "./packages/*"
+    "packages/*"
   ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
