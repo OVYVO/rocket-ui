@@ -1,6 +1,10 @@
 <template>
-  <div class="message-wrapper">
-    <span>哈哈哈哈</span> 
+  <div 
+    class="message-wrapper fadeInDown" 
+    v-if="value"
+    :style="style"
+  >
+    <span>{{message}}</span> 
   </div>
 </template>
 
@@ -11,30 +15,52 @@ export default {
   props:{
     value:{
       required: true,
-      type: Boolean
+      type: Boolean,
+      default: true
+    },
+    type:{
+      type: String,
+      default: 'primary',
+      validator: function (value) {
+        return ['primary', 'error', 'warning','success'].indexOf(value) !== -1;
+      }
     },
     duration:{
       type: Number,
       default:3000
     },
     message:{
-      require: true,
+      required: true,
       type: String,
-      default:()=>{}
+      default: '请输入提示语句'
+    }
+  },
+  data(){
+    return{
+      bgColor: {
+        'primary': '#1890ff',
+        'error': '#f5222d',
+        'warning': '#faad14',
+        'success': '#52c41a'
+      }
+    }
+  },
+  computed:{
+    style() {
+      return {
+        backgroundColor: this.bgColor[this.type]
+      };
     }
   },
   mounted(){
-    //const _this = this
-    // this.timer = setTimeout(()=>{
-    //   _this.$emit('input',false)
-    // },this.duration)
+    const _this = this
+    this.timer = setTimeout(()=>{
+       _this.$emit('input',false)
+       _this.$emit('callback') // 弹窗关闭的回调事件
+    },this.duration)
   },
   destroyed(){
-    //clearTimeout(this.timer)
+    clearTimeout(this.timer)
   }
 }
 </script>
-
-<style>
-
-</style>
