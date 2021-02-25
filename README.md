@@ -6,18 +6,18 @@
 // package.json文件设置，开启工作区
 "private": true,
 "workspaces": [
-	"./packages/*"
+  "./packages/*"
 ]
 ```
 
-工作区根目录安装依赖举例: yarn add xxx -W
-指定工作区安装依赖举例: yarn workspace xxx add xxx
-所有工作区安装依赖: yarn install
+1. 工作区根目录安装依赖举例: yarn add xxx -W
+2. 指定工作区安装依赖举例: yarn workspace xxx add xxx
+3. 所有工作区安装依赖: yarn install
 
 ###### rollup 打包
 
-指定工作区打包举例: yarn workspace xxx run build
-所有工作区打包举例: yarn build
+1. 指定工作区打包举例: yarn workspace xxx run build
+2. 所有工作区打包举例: yarn build
 
 ###### 运行 storybook
 
