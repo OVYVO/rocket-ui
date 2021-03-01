@@ -15,7 +15,7 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Toast },
+  components: { Statistics },
   template: '<statistics v-bind="$props"/>'
 });
 

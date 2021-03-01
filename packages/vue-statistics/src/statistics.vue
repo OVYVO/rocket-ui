@@ -23,7 +23,7 @@ export default {
     label:{
       required: true,
       type: String,
-      default: ""
+      default: "请输入标题"
     },
     total:{
       required: true,
@@ -37,11 +37,11 @@ export default {
     },
     strokeWidth:{
       type: String,
-      default: '4rem'
+      default: '200px'
     },
     strokeHeight:{
       type: String,
-      default: '0.4rem'
+      default: '20px'
     },
     additionInfo:{
       type: String,
