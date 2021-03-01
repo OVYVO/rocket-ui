@@ -1,14 +1,14 @@
 {
-  "name": "vue-toast",
+  "name": "vue-statistics",
   "version": "0.0.1",
-  "description": "vue弹窗组件",
+  "description": "vue统计组件",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "del": "rimraf dist"
   },
-  "keywords": ["vue-toast"],
+  "keywords": ["vue-statistics"],
   "author": "vue12306@163.com",
   "license": "ISC"
 }

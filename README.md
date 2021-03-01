@@ -16,7 +16,7 @@
 
 ###### rollup 打包
 
-1. 指定工作区打包举例: yarn workspace xxx run build
+1. 指定工作区打包举例: yarn workspace xxx run build(废弃)
 2. 所有工作区打包举例: yarn build
 
 ###### 运行 storybook
