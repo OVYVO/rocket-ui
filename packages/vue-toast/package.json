@@ -1,5 +1,5 @@
 {
-  "name": "vue-toast",
+  "name": "@yan/vue-toast",
   "version": "0.0.1",
   "description": "vue弹窗组件",
   "main": "dist/cjs/index.js",

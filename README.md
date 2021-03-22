@@ -25,6 +25,20 @@
 yarn storybook
 ```
 
-###### 版本
+###### 清除 lerna 缓存
 
-1. v1.0.0 2021.3.22
+```javascript
+yarn clean
+```
+
+###### 清除 package 中的 dist 文件夹
+
+```javascript
+yarn workspaces run del
+```
+
+###### 发布版本
+
+```javascript
+yarn lerna
+```

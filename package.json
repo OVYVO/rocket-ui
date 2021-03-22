@@ -1,13 +1,12 @@
 {
   "name": "yan-vue-utils",
-  "version": "1.0.0",
-  "description": "针对项目日常业务封装的组件库",
+  "version": "0.0.0",
+  "private": true,
+  "license": "ISC",
   "keywords": [
-    "yan-utils",
+    "vue-utils",
     "yan-vue-utils"
   ],
-  "private": false,
-  "license": "ISC",
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
@@ -25,6 +24,7 @@
     "lerna": "^3.22.1",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",
+    "rimraf": "^3.0.2",
     "rollup": "^2.38.4",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-json": "^4.0.0",
@@ -42,15 +42,17 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup -c",
+    "lerna": "lerna publish",
+    "clean": "lerna clean",
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c"
   },
   "author": "vue12306@163.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OVYVO/yan-utils.git"
+    "url": "https://github.com/OVYVO/vue-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/OVYVO/yan-utils/issues"
+    "url": "https://github.com/OVYVO/vue-utils/issues"
   }
 }

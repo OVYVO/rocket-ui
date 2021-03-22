@@ -1,5 +1,5 @@
 {
-  "name": "vue-statistics",
+  "name": "@yan/vue-statistics",
   "version": "0.0.1",
   "description": "vue统计组件",
   "main": "dist/cjs/index.js",
