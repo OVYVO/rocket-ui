@@ -1,5 +1,11 @@
 {
-  "name": "root",
+  "name": "vue-utils",
+  "version": "1.0.0",
+  "description": "针对项目日常业务封装的组件库",
+  "keywords": [
+    "yan-utils",
+    "yan-vue-utils"
+  ],
   "private": true,
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.12.13",
@@ -37,5 +43,13 @@
     "build": "rollup -c",
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c"
+  },
+  "author": "vue12306@163.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OVYVO/yan-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OVYVO/yan-utils/issues"
   }
 }
