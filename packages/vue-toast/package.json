@@ -12,5 +12,6 @@
     "vue-toast"
   ],
   "author": "vue12306@163.com",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "54bbb98cb110dcca65a6bd1633195b0cc14b9e4b"
 }
