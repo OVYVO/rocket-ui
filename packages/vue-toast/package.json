@@ -1,6 +1,6 @@
 {
   "name": "@yan/vue-toast",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "vue弹窗组件",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -13,5 +13,5 @@
   ],
   "author": "vue12306@163.com",
   "license": "ISC",
-  "gitHead": "54bbb98cb110dcca65a6bd1633195b0cc14b9e4b"
+  "gitHead": "c2137684dc7463960d476a3a6981c58142de8f10"
 }
