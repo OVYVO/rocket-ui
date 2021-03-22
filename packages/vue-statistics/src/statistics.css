@@ -14,7 +14,7 @@
 .progress{
   margin: 0 10px;
   background: #D2D2D2;
-  border-radius: 0.08rem;
+  border-radius: 4px;
   position: relative;
   
 }
@@ -35,7 +35,7 @@
   display: block;
   position: absolute;
   right: 0;
-  bottom: -0.44rem;
+  bottom: -0.8rem;
   font-size: 0.24rem;
   font-weight: 400;
   color: #333333;

@@ -56,7 +56,7 @@ export default {
     const _this = this
     this.timer = setTimeout(()=>{
        _this.$emit('input',false)
-       _this.$emit('callback') // 弹窗关闭的回调事件
+       _this.$emit('callback')
     },this.duration)
   },
   destroyed(){
