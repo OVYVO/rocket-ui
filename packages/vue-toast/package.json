@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "del": "rimraf dist"
   },
-  "keywords": ["vue-toast"],
+  "keywords": [
+    "vue-toast"
+  ],
   "author": "vue12306@163.com",
   "license": "ISC"
 }

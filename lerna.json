@@ -5,9 +5,12 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
-    "ignoreChanges": ["*.md", "package.json"],
+    "ignoreChanges": [
+      "*.md",
+      "package.json"
+    ],
     "message": "chore(release): publish",
     "registry": "https://registry.npmjs.org"
   },
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
