@@ -24,3 +24,7 @@
 ```javascript
 yarn storybook
 ```
+
+###### 版本
+
+1. v1.0.0 2021.3.22
