@@ -18,7 +18,7 @@
 <script>
 import './main.css';
 export default {
-  name: 'myStatistics',
+  name: 'VueStatistics',
   props:{
     label:{
       required: true,

@@ -34,7 +34,7 @@ const files = [
 `import ${ComponentName} from './src/main.vue'
 
 ${ComponentName}.install = Vue => {
-  Vue.component(${ComponentName}.name, ComponentName)
+  Vue.component(${ComponentName}.name, ${ComponentName})
 }
 
 export default ${ComponentName}`
@@ -44,7 +44,7 @@ export default ${ComponentName}`
     filename: 'src/main.vue',
     content: 
 `<template>
-  <div class="vue-${componentName}"></div>
+  <div class="${componentName}-container"></div>
 </template>
 
 <script>
@@ -66,11 +66,11 @@ export default {
   {
     filename: `src/${ComponentName}.stories.js`,
     content: 
-`import ${componentName} from './main.vue';
+`import ${ComponentName} from './main.vue';
 
 export default {
-  title: '${componentName}',
-  component: ${componentName},
+  title: '${ComponentName}',
+  component: ${ComponentName},
   argTypes: {
     //type: {
     //  control: {
@@ -103,7 +103,7 @@ Primary.args = {
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo /\"Error: no test specified/\" && exit 1",
     "del": "rimraf dist"
   },
   "keywords": [

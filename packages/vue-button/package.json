@@ -1,0 +1,18 @@
+{
+  "name": "@yan/vue-button",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "del": "rimraf dist"
+  },
+  "keywords": [
+    "vue-button"
+  ],
+  "author": "vue12306@163.com",
+  "license": "MIT",
+  "gitHead": "fb325af9bfaca1d35a42a338250e1edab24a45ea"
+}
+

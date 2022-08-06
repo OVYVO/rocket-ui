@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import './main.css';ß
+import './main.css';
 export default {
-  name: 'vue-toast',
+  name: 'VueToast',
   props:{
     value:{
       required: true,
