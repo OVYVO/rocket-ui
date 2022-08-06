@@ -43,6 +43,7 @@ module.exports = fs.readdirSync(root)
   .filter(item => fs.statSync(path.resolve(root, item)).isDirectory())
   // 为每一个文件夹创建对应的配置
   .map(item => {
+    // 获取每个组件包下的package.json文件
     const pkg = require(path.resolve(root, item, 'package.json'))
     return {
       input: path.resolve(root, item, 'index.js'),

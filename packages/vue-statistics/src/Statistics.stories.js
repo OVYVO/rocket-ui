@@ -1,4 +1,4 @@
-import Statistics from './statistics.vue';
+import Statistics from './main.vue';
 
 export default {
   title: 'Statistics',

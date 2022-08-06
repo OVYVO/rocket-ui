@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import './toast.css';
+import './main.css';ß
 export default {
   name: 'vue-toast',
   props:{

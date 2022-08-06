@@ -1,4 +1,4 @@
-import Toast from './toast.vue';
+import Toast from './main.vue';
 
 export default {
   title: 'Toast',

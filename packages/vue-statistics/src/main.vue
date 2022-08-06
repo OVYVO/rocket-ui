@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import './statistics.css';
+import './main.css';
 export default {
   name: 'myStatistics',
   props:{
