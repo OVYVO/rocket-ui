@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import './main.css';
 export default {
   name: 'VueStatistics',
   props:{
@@ -60,3 +59,52 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+.statistics-container{
+  display: flex;
+}
+.section{
+  display: flex;
+  align-items: center;
+}
+.label{
+  font-size: 12px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 12px;
+}
+.progress{
+  margin: 0 10px;
+  background: #D2D2D2;
+  border-radius: 4px;
+  position: relative;
+  
+}
+.progress::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--success-num);
+  background: #FF9E0D;
+  border-radius: 4px;
+  transition: width 0.5s linear;
+}
+.progress::after{
+  content: var(--addition-info);
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -0.8rem;
+  font-size: 0.24rem;
+  font-weight: 400;
+  color: #333333;
+}
+.info{
+  font-size: 12px;
+  color: #333333;
+  line-height: 24px;
+}
+</style>

@@ -48,100 +48,32 @@ export default ${ComponentName}`
 </template>
 
 <script>
-import './main.css'
 export default {
   name: 'Vue${ComponentName}'
 };
-</script>`
-  },
-  // src/main.css
-  {
-    filename: 'src/main.css',
-    content: 
-`.${componentName}-container{
-  
-}`
-  },
-  // src/Component.stories.js
-  {
-    filename: `src/${ComponentName}.stories.js`,
-    content: 
-`import ${ComponentName} from './main.vue';
+</script>
+<style lang='less' scoped>
+.${componentName}-container:{
 
-export default {
-  title: '${ComponentName}',
-  component: ${ComponentName},
-  argTypes: {
-    //type: {
-    //  control: {
-    //    type: 'inline-radio',
-    //    options: ['primary', 'error', 'warning', 'success']
-    //  }
-    //}
-  },
-};
-
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { ${ComponentName} },
-  template: '<${componentName} v-bind="$props"/>'
-});
-
-export const Primary = Template.bind({});
-Primary.args = {
-
-};`
-  },
-  // package.json
-  {
-    filename: `package.json`,
-    content:
-`{
-  "name": "@yan/vue-${componentName}",
-  "version": "0.0.1",
-  "description": "",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "scripts": {
-    "test": "echo /\"Error: no test specified/\" && exit 1",
-    "del": "rimraf dist"
-  },
-  "keywords": [
-    "vue-${componentName}"
-  ],
-  "author": "vue12306@163.com",
-  "license": "MIT",
-  "gitHead": "fb325af9bfaca1d35a42a338250e1edab24a45ea"
 }
-`
+</style>`
   },
-  // LICENSE.md
-  {
-    filename: `LICENSE.md`,
-    content:
-`MIT License
-
-Copyright (c) [2022][vue-${componentName}]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.`
-  }
+  
+  
+  
 ]
+
+// 添加到 components.json
+const componentsFile = require('../../components.json');
+if (componentsFile[componentName]) {
+  console.error(`${componentName} 已存在.`);
+  process.exit(1);
+}
+componentsFile[componentname] = `./packages/${componentName}/index.js`;
+fileSave(path.join(__dirname, '../../components.json'))
+  .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
+  .end('\n');
+
 
 files.forEach(file=>{
   fileSave(path.join(packagePath,file.filename))

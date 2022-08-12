@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import './main.css';
 export default {
   name: 'VueToast',
   props:{
@@ -64,3 +63,39 @@ export default {
   }
 }
 </script>
+<style scoped>
+.message-wrapper{
+  width: 200px;
+  height: 40px;
+  background: rgba(0,0,0,0.72);
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  margin: auto;
+  border-radius: 5px;
+  animation-duration: 0.6s;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+}
+.message-wrapper span{
+  font-size: 12px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 40px;
+  user-select: none;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+</style>

@@ -1,0 +1,4 @@
+{
+  "statistics": "./packages/statistics/index.js",
+  "toast": "./packages/toast/index.js"
+}
