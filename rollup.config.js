@@ -1,4 +1,4 @@
-import fs from 'fs'
+// import fs from 'fs'
 import path from 'path'
 import json from 'rollup-plugin-json'
 import vue from 'rollup-plugin-vue'
@@ -49,44 +49,20 @@ module.exports = {
   output: [
     {
       exports: 'auto',
-      file: path.resolve(root, pkg.main),
+      file: path.resolve('dist/components.cjs.js'),
       format: 'cjs' 
     },
     {
       exports: 'auto',
-      file: path.resolve(root, pkg.module),
+      file: path.resolve('dist/components.es.js'),
       format: 'es'
+    },
+    {
+      format: 'umd',
+      file: path.resolve('dist/components.min.js'),
+      name: 'YanUi', //打包后的全局变量名称 如：window.YanUi
     } 
-  ]
+  ],
+  plugins: plugins
 }
 
-// module.exports = fs.readdirSync(root)
-//   // 过滤，只保留文件夹
-//   .filter(item => fs.statSync(path.resolve(root, item)).isDirectory())
-//   // 为每一个文件夹创建对应的配置
-//   .map(item => {
-//     // 获取每个组件包下的package.json文件
-//     const pkg = require(path.resolve(root, item, 'package.json'))
-//     return {
-//       input: path.resolve(root, item, 'index.js'),
-//       output: [
-//         {
-//           exports: 'auto',
-//           file: path.resolve(root, item, 'dist/umd/index.js'),
-//           format: 'umd',
-//           name: 'vueLib' 
-//         },
-//         {
-//           exports: 'auto',
-//           file: path.resolve(root, item, pkg.main),
-//           format: 'cjs' 
-//         },
-//         {
-//           exports: 'auto',
-//           file: path.resolve(root, item, pkg.module),
-//           format: 'es'
-//         } 
-//       ],
-//       plugins: plugins
-//     }
-//   })

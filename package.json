@@ -20,8 +20,6 @@
     "cross-env": "^7.0.3",
     "file-save": "^0.2.0",
     "json-templater": "^1.2.0",
-    "less": "3.9.0",
-    "less-loader": "5.0.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.38.4",
     "rollup-plugin-babel": "^4.4.0",
