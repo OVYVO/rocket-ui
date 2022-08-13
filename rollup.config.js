@@ -42,7 +42,7 @@ const plugins = [
 isDev || plugins.push(terser())
 
 // packages 文件夹路径
-const root = path.resolve(__dirname, 'packages')
+const root = path.resolve(__dirname, 'src')
 
 module.exports = {
   input: path.resolve(root, 'index.js'),
@@ -59,7 +59,7 @@ module.exports = {
     },
     {
       format: 'umd',
-      file: path.resolve('dist/components.min.js'),
+      file: path.resolve('dist/components.umd.js'),
       name: 'YanUi', //打包后的全局变量名称 如：window.YanUi
     } 
   ],
