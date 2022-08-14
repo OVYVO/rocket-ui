@@ -31,9 +31,13 @@
     "rollup-plugin-vue": "^5.1.9",
     "uppercamelcase": "^3.0.0",
     "vue-loader": "^15.9.6",
-    "vue-template-compiler": "^2.6.12"
+    "vue-server-renderer": "2.6.12",
+    "vue-template-compiler": "^2.6.12",
+    "vuepress": "^1.9.7"
   },
   "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "build": "rollup -c",
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c"
