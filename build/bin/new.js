@@ -69,7 +69,7 @@ if (componentsFile[componentName]) {
   console.error(`${componentName} 已存在.`);
   process.exit(1);
 }
-componentsFile[componentname] = `./packages/${componentName}/index.js`;
+componentsFile[componentname] = `/packages/${componentName}/index.js`;
 fileSave(path.join(__dirname, '../../components.json'))
   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
   .end('\n');

@@ -1,4 +1,14 @@
+const path = require('path')
+
 module.exports={
+  head: [
+    ['link',{ rel:'icon',href: '/rocket.png'}],
+  ],
+  locales:{
+    "/":{
+      lang: 'zh-CN'
+    }
+  },
   themeConfig: {
     title: 'VueUtils',
     description: '简易组件库',
@@ -9,9 +19,6 @@ module.exports={
       { text: '组件', link: '/components/install'},
       { text: '博客', link: 'https://ovyvo.github.io/yanblog.github.io/'},
       { text: 'github', link: 'https://github.com/OVYVO/vue-utils'}
-    ],
-    head: [
-      ['link',{ rel:'icon',href: '/rocket.png'}],
     ],
     sidebar: [
       ['/','首页'],
@@ -32,5 +39,13 @@ module.exports={
         ]
       }
     ]
+  },
+  plugins: ['demo-container'],
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@root': path.resolve(__dirname, '../../')
+      }
+    }
   }
 }
