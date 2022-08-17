@@ -58,9 +58,6 @@ export default {
 }
 </style>`
   },
-  
-  
-  
 ]
 
 // 添加到 components.json
@@ -73,7 +70,6 @@ componentsFile[componentname] = `/packages/${componentName}/index.js`;
 fileSave(path.join(__dirname, '../../components.json'))
   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
   .end('\n');
-
 
 files.forEach(file=>{
   fileSave(path.join(packagePath,file.filename))
