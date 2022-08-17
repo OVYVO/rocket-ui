@@ -24,7 +24,7 @@ const uppercamelcase = require('uppercamelcase')
 const componentName = process.argv[2]
 const ComponentName = uppercamelcase(componentName)
 // 获取路径
-const packagePath = path.resolve(__dirname,'../../packages',`vue-${componentName}`)
+const packagePath = path.resolve(__dirname,'../../packages',`${componentName}`)
 
 const files = [
   // index.js
