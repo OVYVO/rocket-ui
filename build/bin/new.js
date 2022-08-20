@@ -23,9 +23,8 @@ const uppercamelcase = require('uppercamelcase')
 // 获取组件名
 const componentName = process.argv[2]
 const ComponentName = uppercamelcase(componentName)
-// 获取路径
-const packagePath = path.resolve(__dirname,'../../packages',`${componentName}`)
 
+const packagePath = path.resolve(__dirname,'../../packages',`${componentName}`)
 const files = [
   // index.js
   {
@@ -59,6 +58,22 @@ export default {
 </style>`
   },
 ]
+files.forEach(file=>{
+  fileSave(path.join(packagePath,file.filename))
+    .write(file.content, 'utf-8')
+    .end('\n')
+})
+
+// 添加组件文档
+const docsComponentsPath = path.resolve(__dirname,'../../docs/components')
+fileSave(path.join(docsComponentsPath,`${componentName}.md`))
+  .write(JSON.stringify(`# ${componentName}`, null, '  '), 'utf8')
+  .end('\n');
+
+
+// TODO
+// 修改 docs下的config.js
+// 修改 enhanceApp.js
 
 // 添加到 components.json
 const componentsFile = require('../../components.json');
@@ -71,10 +86,6 @@ fileSave(path.join(__dirname, '../../components.json'))
   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
   .end('\n');
 
-files.forEach(file=>{
-  fileSave(path.join(packagePath,file.filename))
-    .write(file.content, 'utf-8')
-    .end('\n')
-})
+
 
 console.log(`🔨🔨🔨add ${componentName} success!`)
