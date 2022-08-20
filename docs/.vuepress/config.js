@@ -35,7 +35,7 @@ module.exports={
         path: '/components/statistics',
         sidebarDepth: '1',
         children: [
-          ['/components/statistics','条形统计']
+          ['/components/statistics','Statistics 条形统计']
         ]
       }
     ]
@@ -50,8 +50,5 @@ module.exports={
         '@root': path.resolve(__dirname, '../../')
       }
     }
-  },
-  // markdown:{
-  //   lineNumbers: true
-  // }
+  }
 }
