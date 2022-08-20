@@ -5,12 +5,14 @@
       <div class="progress" 
         :style="`
           --success-num: ${percent};
+          --success-color: ${color};
           --addition-info:'${additionInfo}';
           width:${strokeWidth};
-          height:${strokeHeight}
+          height:${strokeHeight};
+          backgroundColor:${strokeColor}
         `"
       ></div>
-      <div class="info">{{success}}/{{total}}</div>
+      <div class="info" v-if="showInfo">{{success}}/{{total}}</div>
     </div>
   </div>
 </template>
@@ -34,6 +36,10 @@ export default {
       type: Number,
       default: 0,
     },
+    color:{
+      type: String,
+      default: '#FF9E0D'
+    },
     strokeWidth:{
       type: String,
       default: '200px'
@@ -42,9 +48,17 @@ export default {
       type: String,
       default: '20px'
     },
+    strokeColor:{
+      type: String,
+      default: '#D2D2D2'
+    },
     additionInfo:{
       type: String,
       default: ''
+    },
+    showInfo:{
+      type: Boolean,
+      default: false
     }
   },
   computed:{
@@ -88,7 +102,7 @@ export default {
   top: 0;
   height: 100%;
   width: var(--success-num);
-  background: #FF9E0D;
+  background: var(--success-color);
   border-radius: 4px;
   transition: width 0.5s linear;
 }
@@ -97,8 +111,8 @@ export default {
   display: block;
   position: absolute;
   right: 0;
-  bottom: -0.8rem;
-  font-size: 0.24rem;
+  bottom: -20px;
+  font-size: 12px;
   font-weight: 400;
   color: #333333;
 }

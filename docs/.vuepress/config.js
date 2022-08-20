@@ -16,7 +16,7 @@ module.exports={
     smoothScroll: true,
     nav: [
       { text: '首页', link: '/' },
-      { text: '组件', link: '/components/install'},
+      { text: '组件', link: '/guide/install'},
       { text: '博客', link: 'https://ovyvo.github.io/yanblog.github.io/'},
       { text: 'github', link: 'https://github.com/OVYVO/vue-utils'}
     ],
@@ -24,10 +24,10 @@ module.exports={
       ['/','首页'],
       {
         title: '开发指南',
-        path: '/components/install',
+        path: '/guide/install',
         sidebarDepth: '1',
         children: [
-          ['/components/install','安装']
+          ['/guide/install','安装']
         ]
       },
       {
@@ -40,12 +40,18 @@ module.exports={
       }
     ]
   },
-  plugins: ['demo-container'],
+  plugins: [
+    ['@vuepress/back-to-top'],
+    ['demo-container']
+  ],
   configureWebpack: {
     resolve: {
       alias: {
         '@root': path.resolve(__dirname, '../../')
       }
     }
-  }
+  },
+  // markdown:{
+  //   lineNumbers: true
+  // }
 }

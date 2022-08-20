@@ -8,16 +8,14 @@
     "yan-vue-utils"
   ],
   "dependencies": {
-    "-": "^0.0.1",
     "@babel/plugin-transform-runtime": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
-    "D": "^1.0.0",
     "core-js": "^3.8.3",
-    "vue": "^2.6.12",
-    "vuepress-plugin-demo-container": "^0.2.0"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
     "autoprefixer": "9.0.0",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
@@ -37,7 +35,8 @@
     "vue-loader": "^15.9.6",
     "vue-server-renderer": "2.6.12",
     "vue-template-compiler": "^2.6.12",
-    "vuepress": "^1.9.7"
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-demo-container": "^0.2.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
