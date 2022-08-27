@@ -22,7 +22,6 @@
     "file-save": "^0.2.0",
     "json-templater": "^1.2.0",
     "less-loader": "7",
-    "rimraf": "^3.0.2",
     "rollup": "^2.38.4",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
