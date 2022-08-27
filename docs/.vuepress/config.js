@@ -1,4 +1,5 @@
 const path = require('path')
+const components = require('./components.js') 
 
 module.exports={
   head: [
@@ -34,9 +35,7 @@ module.exports={
         title: '组件',
         path: '/components/statistics',
         sidebarDepth: '1',
-        children: [
-          ['/components/statistics','Statistics 条形统计']
-        ]
+        children: components.links
       }
     ]
   },

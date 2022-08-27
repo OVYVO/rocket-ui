@@ -70,18 +70,16 @@ fileSave(path.join(docsComponentsPath,`${componentName}.md`))
   .write(JSON.stringify(`# ${componentName}`, null, '  '), 'utf8')
   .end('\n');
 
-
-// TODO
-// 修改 docs下的config.js
-// 修改 enhanceApp.js
-
 // 添加到 components.json
 const componentsFile = require('../../components.json');
 if (componentsFile[componentName]) {
   console.error(`${componentName} 已存在.`);
   process.exit(1);
 }
-componentsFile[componentname] = `/packages/${componentName}/index.js`;
+componentsFile[componentname] = `{
+  "path": "/packages/${componentName}/index.js",
+  "name": "${process.argv[3] ? process.argv[3] : componentName}"
+}`;
 fileSave(path.join(__dirname, '../../components.json'))
   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
   .end('\n');

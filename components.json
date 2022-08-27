@@ -1,4 +1,10 @@
 {
-  "statistics": "./packages/statistics/index.js",
-  "toast": "./packages/toast/index.js"
+  "statistics": {
+    "path":"./packages/statistics/index.js",
+    "name":"条形统计"
+  },
+  "toast": {
+    "path":"./packages/toast/index.js",
+    "name":"Tost提示"
+  }
 }
