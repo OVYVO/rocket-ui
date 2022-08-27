@@ -11,7 +11,7 @@ process.on('exit',()=>{
 
 // 判断组件名是否必填
 if(!process.argv[2]){
-  console.log('[组件名]必填')
+  console.log('🚗[组件名]必填')
   process.exit(1)
 }
 
@@ -63,6 +63,7 @@ files.forEach(file=>{
     .write(file.content, 'utf-8')
     .end('\n')
 })
+console.log(`👀${componentName}文件夹添加完成`)
 
 // 添加组件文档
 const docsComponentsPath = path.resolve(__dirname,'../../docs/components')
@@ -70,20 +71,22 @@ fileSave(path.join(docsComponentsPath,`${componentName}.md`))
   .write(JSON.stringify(`# ${componentName}`, null, '  '), 'utf8')
   .end('\n');
 
+console.log(`👀${componentName}.md文档添加完成`)
+
 // 添加到 components.json
 const componentsFile = require('../../components.json');
 if (componentsFile[componentName]) {
-  console.error(`${componentName} 已存在.`);
+  console.error(`⚠️⚠️⚠️${componentName} 已存在.`);
   process.exit(1);
 }
-componentsFile[componentname] = `{
-  "path": "/packages/${componentName}/index.js",
-  "name": "${process.argv[3] ? process.argv[3] : componentName}"
-}`;
+componentsFile[componentName] = {
+  "path": `/packages/${componentName}/index.js`,
+  "name": `${process.argv[3] ? process.argv[3] : componentName}`
+};
 fileSave(path.join(__dirname, '../../components.json'))
   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
   .end('\n');
+  
+console.log(`👀components.json更新完成`)
 
-
-
-console.log(`🔨🔨🔨add ${componentName} success!`)
+console.log(`🔨🔨🔨成功添加${componentName}组件`)

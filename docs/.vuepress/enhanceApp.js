@@ -3,15 +3,23 @@
 import Statistics from '@root/packages/statistics/src/main.vue';
 import Toast from '@root/packages/toast/src/main.vue';
 
+
 const components = [
   Statistics,
   Toast
 ];
+
+const plugins = [
+
+]
 
 export default({
   Vue
 })=>{
   components.forEach(item=>{
     Vue.component(item.name, item);
+  })
+  plugins.forEach(item=>{
+    Vue.prototype['$'+item.name] = item
   })
 }

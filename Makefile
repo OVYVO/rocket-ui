@@ -5,8 +5,7 @@ install:
 	yarn
 
 new:
-	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
-
+	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS)) && node build/bin/build-docs.js
 
 help:
 	@echo "   \033[35mmake\033[0m \033[1m命令使用说明\033[0m"
