@@ -1,4 +1,4 @@
 # 组件库的安装
 ```
-npm install vue-utils
+npm install rocket-ui
 ```

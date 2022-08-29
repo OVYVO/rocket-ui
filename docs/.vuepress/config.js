@@ -2,8 +2,9 @@ const path = require('path')
 const components = require('./components.js') 
 
 module.exports={
+  title: 'Rocket-UI',
   head: [
-    ['link',{ rel:'icon',href: '/rocket.png'}],
+    ['link',{ rel:'icon',href: '/rocket.png'}]
   ],
   locales:{
     "/":{
@@ -11,7 +12,7 @@ module.exports={
     }
   },
   themeConfig: {
-    title: 'VueUtils',
+    title: 'Rocket-UI',
     description: '简易组件库',
     logo: '/rocket.png',
     smoothScroll: true,

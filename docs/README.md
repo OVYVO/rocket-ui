@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /indexBac.png
-heroText: VueUtils
+heroText: RocketUI
 tagline: 适用于Vue2.0的简易组件库
 actionText: 快速上手 →
 actionLink: /guide/install

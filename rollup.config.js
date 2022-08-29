@@ -60,7 +60,7 @@ module.exports = {
     {
       format: 'umd',
       file: path.resolve('dist/components.umd.js'),
-      name: 'YanUi', //打包后的全局变量名称 如：window.YanUi
+      name: 'rocket-ui', //打包后的全局变量名称 如：window.YanUi
     } 
   ],
   plugins: plugins
