@@ -21,18 +21,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      name: CheckOut
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       # 第二步：安装依赖
-      name: Install
+      - name: Install
         - uses: actions/setup-node@v3
           with:
             node-version: '14'
-        - run: npm install
+          run: npm install
       
       # 第三步：构建静态目录
-      name: Build Docs
-        - run: ｜
+      - name: Build Docs
+        run: ｜
           node build/bin/deploy-ci.sh
       
