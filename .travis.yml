@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+node_js: 16
+addons:
+  chrome: stable
+
+branch:
+  only: 
+    - release
+
+install:
+  - npm install
+
+before_install:
+- export TRAVIS_COMMIT_MSG="[deploy] $(git log --format='%h - %B' --no-merges -n 1)"
+
+after_success:
+- sh build/deploy-ci.sh
