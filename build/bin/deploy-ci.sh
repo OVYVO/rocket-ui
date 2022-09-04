@@ -3,7 +3,7 @@ mkdir temp_web
 git config --global user.name "OVYVO"
 git config --global user.email "vue12306@163.com"
 
-if [ "$ROT_TOKEN" = "" ]; then
+if [ "${secrets.ROT_TOKEN}" = "" ]; then
   echo "Bye~"
   exit 0
 fi
@@ -11,11 +11,11 @@ fi
 # build site
 npm run docs:build
 cd temp_web
-git clone https://$ROT_TOKEN@github.com/vue-utils/release.git && cd release
+git clone https://${secrets.ROT_TOKEN}@github.com/vue-utils/main.git && cd main
 mkdir webpages
 rm -rf webpages/**
 cp -rf ../../docs/.vuepress/dist/** webpages/
 git add -A .
-git commit -m "$TRAVIS_COMMIT_MSG"
+git commit -m "🔨构建静态目录"
 git push origin gh-pages
 cd ../..
