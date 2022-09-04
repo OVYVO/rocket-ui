@@ -1,6 +1,0 @@
-{
-  "statistics": {
-    "path": "./packages/statistics/index.js",
-    "name": "条形统计"
-  }
-}
