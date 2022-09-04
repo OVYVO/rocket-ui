@@ -22,7 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       name: CheckOut
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
 
       # 第二步：安装依赖
       name: Install
