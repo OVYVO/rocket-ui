@@ -23,14 +23,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # 第二步：安装依赖
+      # install
       - name: Install
         - uses: actions/setup-node@v3
           with:
             node-version: '14'
           run: npm install
       
-      # 第三步：构建静态目录
+      # build docs
       - name: Build Docs
         run: ｜
           node build/bin/deploy-ci.sh
