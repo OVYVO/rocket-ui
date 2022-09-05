@@ -2,7 +2,7 @@ const path = require('path')
 const components = require('./components.js') 
 
 module.exports={
-  base:'/vue-utils/',  
+  base:'/rocket-ui/',  
   title: 'Rocket-UI',
   head: [
     ['link',{ rel:'icon',href: '/rocket.png'}]
