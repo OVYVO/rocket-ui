@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build and deploy
 
 # Controls when the workflow will run
 on:
@@ -23,14 +23,34 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Install
-      - uses: actions/setup-node@v3
+      - name: Use node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm install
       
-      # Build docs
-      - name: Build Docs
-        run: ｜
-          node build/bin/deploy-ci.sh
+      # 缓存 node_modules
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        id: yarn-cache
+        with: 
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
       
+      -name: Install yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn
+ 
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ROT_TOKEN }}
+          # 部署到 gh-pages 分支
+          BRANCH: gh-pages
+          # 部署目录为 VuePress 的默认输出目录，这里需要根据项目的目录进行修改
+          FOLDER: docs/.vuepress/dist
