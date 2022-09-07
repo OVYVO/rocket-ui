@@ -1,11 +1,10 @@
 {
-  "name": "yan-vue-utils",
+  "name": "rocket-ui",
   "version": "0.0.0",
   "private": true,
   "license": "ISC",
   "keywords": [
-    "vue-utils",
-    "yan-vue-utils"
+    "rocket-ui"
   ],
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.12.13",
@@ -47,10 +46,10 @@
   "author": "vue12306@163.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OVYVO/vue-utils.git"
+    "url": "https://github.com/OVYVO/rocket-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/OVYVO/vue-utils/issues"
+    "url": "https://github.com/OVYVO/rocket-ui/issues"
   },
   "browserslist": [
     "defaults",
