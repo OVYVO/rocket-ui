@@ -30,11 +30,11 @@ module.exports={
         path: '/guide/install',
         sidebarDepth: '1',
         children: [
-          ['/guide/install','安装']
+          ['/guide/install','安装及使用']
         ]
       },
       {
-        title: '组件',
+        title: '组件实例',
         path: '/components/statistics',
         sidebarDepth: '1',
         children: components.links
