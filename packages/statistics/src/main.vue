@@ -13,6 +13,10 @@
         `"
       ></div>
       <div class="info" v-if="showInfo">{{success}}/{{total}}</div>
+
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-add"></use>
+      </svg>
     </div>
   </div>
 </template>
@@ -120,5 +124,14 @@ export default {
   font-size: 12px;
   color: #333333;
   line-height: 24px;
+}
+</style>
+<style>
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
 </style>

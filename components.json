@@ -2,5 +2,9 @@
   "statistics": {
     "path": "./packages/statistics/index.js",
     "name": "条形统计"
+  },
+  "message-box": {
+    "path": "/packages/message-box/index.js",
+    "name": "消息弹框"
   }
 }
