@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>样例测试</title>
+  <script src="./vue.js"></script>
+  <script src="../dist/components.umd.js"></script>
+  <link rel="stylesheet" href="../dist/index.css">
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <Statistics label="测试一下" :total="100" :success="45"/>
+  </div>
+</body>
+
+<script>
+  console.log(window['rocket-ui'])
+  const {Statistics} = window['rocket-ui']
+  var app = new Vue({
+    el: '#app',
+    components:{
+      Statistics
+    },
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+</script>
+</html>
