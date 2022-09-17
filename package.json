@@ -1,6 +1,6 @@
 {
   "name": "rockets-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "适用于vue2.0的组件库",
   "private": true,
   "license": "ISC",
@@ -47,8 +47,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "build": "rollup -c",
-    "build:prod": "cross-env NODE_ENV=production rollup -c",
+    "build": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c"
   },
   "author": "vue12306@163.com",
