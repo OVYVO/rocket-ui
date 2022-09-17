@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import MessageBox from './index.vue'
+import MessageBox from './main.vue'
 
 const MessageModalConstructor = Vue.extend(MessageBox)
 

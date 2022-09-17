@@ -6,5 +6,9 @@
   "message-box": {
     "path": "/packages/message-box/index.js",
     "name": "消息弹框"
+  },
+  "icon": {
+    "path": "/packages/icon/index.js",
+    "name": "图标"
   }
 }

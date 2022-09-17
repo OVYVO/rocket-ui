@@ -13,10 +13,6 @@
         `"
       ></div>
       <div class="info" v-if="showInfo">{{success}}/{{total}}</div>
-
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#icon-add"></use>
-      </svg>
     </div>
   </div>
 </template>
