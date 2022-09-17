@@ -1,10 +1,17 @@
 {
   "name": "rocket-ui",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "适用于vue2.0的组件库",
   "private": true,
   "license": "ISC",
+  "main": "lib/components.es.js",
   "keywords": [
     "rocket-ui"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "packages"
   ],
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.12.13",

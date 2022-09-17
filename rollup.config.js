@@ -55,17 +55,17 @@ module.exports = {
   output: [
     {
       exports: 'auto',
-      file: path.resolve('dist/components.cjs.js'),
+      file: path.resolve('lib/components.cjs.js'),
       format: 'cjs' 
     },
     {
       exports: 'auto',
-      file: path.resolve('dist/components.es.js'),
+      file: path.resolve('lib/components.es.js'),
       format: 'es'
     },
     {
       format: 'umd',
-      file: path.resolve('dist/components.umd.js'),
+      file: path.resolve('lib/components.umd.js'),
       name: 'rocket-ui', //打包后的全局变量名称 如：window.RocketUI
     } 
   ],
