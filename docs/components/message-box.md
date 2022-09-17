@@ -18,8 +18,8 @@ export default {
   methods:{
     confirm(){
       this.$confirm({
-        title: "测试一下",
-        message: "哈哈哈"
+        title: "警告信息",
+        message: "确定要执行该操作吗？"
       }).then(res=>{
         console.log(123)
       }).catch(err=>{
