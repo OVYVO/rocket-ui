@@ -64,13 +64,13 @@ ComponentNames.forEach(name => {
       name: componentName
     }));
   }else{
-    includePluginTemplate.push(render(IMPORT_PLUGIN, {
-      name: componentName,
-      package: name
-    }))
-    installPluginTemplate.push(render(INSTALL_PLUGIN_TEMPLATE, {
-      name: componentName
-    }));
+    // includePluginTemplate.push(render(IMPORT_PLUGIN, {
+    //   name: componentName,
+    //   package: name
+    // }))
+    // installPluginTemplate.push(render(INSTALL_PLUGIN_TEMPLATE, {
+    //   name: componentName
+    // }));
   }
 });
 

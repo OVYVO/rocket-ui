@@ -47,7 +47,6 @@ const modalControl = ()=>{
       Vue.nextTick(()=>{
         instance.visible = true
       })
-
     }
   }
 }

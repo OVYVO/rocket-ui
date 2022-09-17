@@ -10,9 +10,9 @@ const components = [
   Icon
 ];
 
-const plugins = [
-  MessageBox
-]
+// const plugins = [
+//   MessageBox
+// ]
 
 export default({
   Vue
@@ -20,7 +20,8 @@ export default({
   components.forEach(item=>{
     Vue.component(item.name, item);
   })
-  plugins.forEach(item=>{
-    Vue.prototype['$'+item.name] = item
-  })
+  // plugins.forEach(item=>{
+  //   Vue.prototype['$'+item.name] = item
+  // })
+  Vue.prototype.$confirm = MessageBox
 }

@@ -48,7 +48,8 @@ module.exports={
   configureWebpack: {
     resolve: {
       alias: {
-        '@root': path.resolve(__dirname, '../../')
+        '@root': path.resolve(__dirname, '../../'),
+        '@packages': path.resolve(__dirname, '../../packages')
       }
     }
   }
