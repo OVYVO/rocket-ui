@@ -10,17 +10,10 @@
     <i class="iconfont icon-delete"></i>
   </div>
 </template>
-
 <style>
-.icon-list{
-  display: flex;
-}
-.iconfont{
-  font-size: 32px !important;
-  color: #606266 !important;
-  margin-right: 10px;
-}
+  .icon-list > .iconfont{
+    margin-right: 20px;
+  }
 </style>
-
 ``` 
 :::
