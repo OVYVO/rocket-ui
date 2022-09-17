@@ -3,7 +3,7 @@ const components = require('./components.js')
 
 module.exports={
   base:'/rocket-ui/',  
-  title: 'Rocket-UI',
+  title: 'Rockets-UI',
   head: [
     ['link',{ rel:'icon',href: '/rocket.png'}]
   ],
@@ -49,7 +49,8 @@ module.exports={
     resolve: {
       alias: {
         '@root': path.resolve(__dirname, '../../'),
-        '@packages': path.resolve(__dirname, '../../packages')
+        '@packages': path.resolve(__dirname, '../../packages'),
+        '@src': path.resolve(__dirname, '../../src')
       }
     }
   }

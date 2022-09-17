@@ -1,9 +1,5 @@
 <template>
-  <div class="icon-container">
-    <svg class="icon" aria-hidden="true">
-      <use :xlink:href="`#icon-${name}`"></use>
-    </svg>
-  </div>
+  <i class="iconfont" :class="`icon-${name}`"></i>
 </template>
 
 <script>
@@ -18,15 +14,3 @@ export default {
   }
 };
 </script>
-<style lang='less' scoped>
-.icon-container{
-  .icon {
-    width: 1em; 
-    height: 1em;
-    vertical-align: -0.15em;
-    overflow: hidden;
-    font-size: 2em;
-    color: #606266;
-  }
-}
-</style>

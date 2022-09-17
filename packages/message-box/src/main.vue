@@ -3,11 +3,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="title">{{title}}</div>
-        <Icon name="close" @click.native="handleAction('close')" />
+        <i class="iconfont icon-close" @click="handleAction('close')"></i>
       </div>
       <div class="modal-body">
         <template v-if="!showInput">
-          <Icon name="warn"/><span>{{message}}</span>
+          <i class="iconfont icon-warnfill"></i><span>{{message}}</span>
         </template>
       </div>
       <div class="modal-footer">
@@ -19,10 +19,8 @@
 </template>
 
 <script>
-import Icon from '@packages/icon/src/main.vue'
 export default {
   name: 'VueMessageBox',
-  components: { Icon },
   props:{
     closeOnHashChange: {
       type: Boolean,
@@ -111,7 +109,7 @@ export default {
         font-weight: 700;
         color: #fff;
       }
-      /deep/ .icon{
+      /deep/ .iconfont{
         font-size: 18px;
         color: #fff;
         cursor: pointer;
@@ -122,7 +120,7 @@ export default {
       justify-content: center;
       align-items: center;
       min-height: 100px;
-      /deep/ .icon{
+      /deep/ .iconfont{
         font-size: 24px;
         color: #409eff;
         cursor: pointer;

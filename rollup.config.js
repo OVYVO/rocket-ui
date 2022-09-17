@@ -40,6 +40,7 @@ const plugins = [
   alias({
     entries: [
       { find: '@packages', replacement: path.resolve(__dirname, 'packages') },
+      { find: '@src', replacement: path.resolve(__dirname, 'src') }
     ]
   })
 ]
