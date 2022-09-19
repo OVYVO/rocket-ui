@@ -67,7 +67,7 @@ module.exports = {
     {
       format: 'umd',
       file: path.resolve('lib/components.umd.js'),
-      name: 'rocket-ui', //打包后的全局变量名称 如：window.RocketUI
+      name: 'rockets-ui', //打包后的全局变量名称 如：window.RocketsUI
     } 
   ],
   plugins: plugins

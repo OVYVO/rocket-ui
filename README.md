@@ -24,18 +24,18 @@
 
 ## 安装
 ```shell
-npm install rocket-ui -S
+npm install rockets-ui -S
 // or
-yarn add rocket-ui -S
+yarn add rockets-ui -S
 // or
-cnpm install rocket-ui -S
+cnpm install rockets-ui -S
 ```
 
 ## 快速开始
 ``` javascript
 import Vue from 'vue'
-import RocketUI from 'rocket-ui'
-import 'rocket-ui/dist/index.css'
+import RocketsUI from 'rockets-ui'
+import 'rockets-ui/lib/index.css'
 
 Vue.use(RocketUI)
 
@@ -43,8 +43,8 @@ Vue.use(RocketUI)
 import {
   Statistics
   // ...
-} from 'rocket-ui'
-import 'rocket-ui/dist/index.css'
+} from 'rockets-ui'
+import 'rockets-ui/lib/index.css'
 
 Vue.component(Statistics.name, Statistics)
 ```
