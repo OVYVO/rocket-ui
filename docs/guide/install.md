@@ -3,18 +3,18 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.org/package/yan-utils">
-    <img src="https://img.shields.io/npm/v/yan-utils.svg">
+  <a href="https://www.npmjs.com/package/rockets-ui">
+    <img src="https://img.shields.io/npm/v/rockets-ui.svg">
   </a>
   <a href="https://npmcharts.com/compare/yan-utils?minimal=true">
     <img src="http://img.shields.io/npm/dm/yan-utils.svg">
   </a>
-  <!-- <a href="http://img.badgesize.io/https://unpkg.com/element-ui/lib/index.js?compression=gzip&label=gzip%20size:%20JS">
-    <img src="http://img.badgesize.io/https://unpkg.com/element-ui/lib/index.js?compression=gzip&label=gzip%20size:%20JS">
+  <a href="http://img.badgesize.io/https://unpkg.com/rockets-ui?compression=gzip&label=gzip%20size:%20JS">
+    <img src="http://img.badgesize.io/https://unpkg.com/rockets-ui?compression=gzip&label=gzip%20size:%20JS">
   </a>
-  <a href="http://img.badgesize.io/https://unpkg.com/element-ui/lib/theme-chalk/index.css?compression=gzip&label=gzip%20size:%20CSS">
-    <img src="http://img.badgesize.io/https://unpkg.com/element-ui/lib/theme-chalk/index.css?compression=gzip&label=gzip%20size:%20CSS">
-  </a> -->
+  <a href="http://img.badgesize.io/https://unpkg.com/rockets-ui/lib/index.css?compression=gzip&label=gzip%20size:%20CSS">
+    <img src="http://img.badgesize.io/https://unpkg.com/rockets-ui/lib/index.css?compression=gzip&label=gzip%20size:%20CSS">
+  </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
   </a>
