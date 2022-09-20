@@ -6,8 +6,8 @@
   <a href="https://www.npmjs.com/package/rockets-ui">
     <img src="https://img.shields.io/npm/v/rockets-ui.svg">
   </a>
-  <a href="https://npmcharts.com/compare/yan-utils?minimal=true">
-    <img src="http://img.shields.io/npm/dm/yan-utils.svg">
+  <a href="https://npmcharts.com/compare/rockets-ui?minimal=true">
+    <img src="http://img.shields.io/npm/dm/rockets-ui.svg">
   </a>
   <a href="http://img.badgesize.io/https://unpkg.com/rockets-ui?compression=gzip&label=gzip%20size:%20JS">
     <img src="http://img.badgesize.io/https://unpkg.com/rockets-ui?compression=gzip&label=gzip%20size:%20JS">
@@ -34,10 +34,10 @@ cnpm install rockets-ui -S
 ## 快速开始
 ``` javascript
 import Vue from 'vue'
-import RocketUI from 'rockets-ui'
+import RocketsUI from 'rockets-ui'
 import 'rockets-ui/lib/index.css'
 
-Vue.use(RocketUI)
+Vue.use(RocketsUI)
 
 // or
 import {

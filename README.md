@@ -37,7 +37,7 @@ import Vue from 'vue'
 import RocketsUI from 'rockets-ui'
 import 'rockets-ui/lib/index.css'
 
-Vue.use(RocketUI)
+Vue.use(RocketsUI)
 
 // or
 import {
