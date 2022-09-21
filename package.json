@@ -24,8 +24,11 @@
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "autoprefixer": "9.0.0",
     "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.5",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "file-save": "^0.2.0",
+    "husky": "^7.0.4",
     "json-templater": "^1.2.0",
     "less-loader": "7",
     "rollup": "^2.38.4",
@@ -64,5 +67,10 @@
     "> 1%",
     "iOS 7",
     "last 3 iOS versions"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
