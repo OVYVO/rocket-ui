@@ -20,12 +20,20 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@rollup/plugin-alias": "^3.1.9",
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "autoprefixer": "9.0.0",
     "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.5",
+    "commitlint-config-cz": "^0.13.3",
+    "commitlint-config-gitmoji": "^2.2.5",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
     "file-save": "^0.2.0",
+    "husky": "^7.0.4",
     "json-templater": "^1.2.0",
     "less-loader": "7",
     "rollup": "^2.38.4",
@@ -47,7 +55,9 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "build:dev": "cross-env NODE_ENV=development rollup -c"
+    "build:dev": "cross-env NODE_ENV=development rollup -c",
+    "commit": "git-cz",
+    "lint": ""
   },
   "author": "vue12306@163.com",
   "repository": {
@@ -64,5 +74,10 @@
     "> 1%",
     "iOS 7",
     "last 3 iOS versions"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  }
 }
