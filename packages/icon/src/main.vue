@@ -1,10 +1,10 @@
 <template>
-  <i class="iconfont" :class="`icon-${name}`"></i>
+  <i :class="`ro-icon-${name}`"></i>
 </template>
 
 <script>
 export default {
-  name: 'VueIcon',
+  name: 'RoIcon',
   props:{
     name:{
       type: String,

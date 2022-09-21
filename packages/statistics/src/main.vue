@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'VueStatistics',
+  name: 'RoStatistics',
   props:{
     label:{
       required: true,

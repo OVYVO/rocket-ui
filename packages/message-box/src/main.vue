@@ -3,11 +3,11 @@
     <div class="ro-messagebox__content">
       <div class="ro-messagebox__header">
         <div class="ro-messagebox__title">{{title}}</div>
-        <i class="iconfont icon-close" @click="handleAction('close')"></i>
+        <i class="ro-icon-close" @click="handleAction('close')"></i>
       </div>
       <div class="ro-messagebox__body">
         <template v-if="!showInput">
-          <i class="iconfont icon-warnfill"></i><span>{{message}}</span>
+          <i class="ro-icon-warnfill"></i><span>{{message}}</span>
         </template>
       </div>
       <div class="ro-messagebox__footer">
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'VueMessageBox',
+  name: 'RoMessageBox',
   props:{
     closeOnHashChange: {
       type: Boolean,

@@ -3,15 +3,15 @@
 ```vue
 <template>
   <div class="icon-list">
-    <i class="iconfont icon-close"></i>
-    <i class="iconfont icon-edit"></i>
-    <i class="iconfont icon-warnfill"></i>
-    <i class="iconfont icon-settings"></i>
-    <i class="iconfont icon-delete"></i>
+    <i class="ro-icon-close"></i>
+    <i class="ro-icon-edit"></i>
+    <i class="ro-icon-warnfill"></i>
+    <i class="ro-icon-settings"></i>
+    <i class="ro-icon-delete"></i>
   </div>
 </template>
 <style>
-  .icon-list > .iconfont{
+  .icon-list > i{
     margin-right: 20px;
   }
 </style>
