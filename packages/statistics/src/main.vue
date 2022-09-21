@@ -1,8 +1,8 @@
 <template>
-  <div class="statistics-container">
-    <div class="section">
-      <div class="label">{{label}}:</div>
-      <div class="progress" 
+  <div class="ro-statistics">
+    <div class="ro-statistics__section">
+      <div class="ro-statistics__label">{{label}}:</div>
+      <div class="ro-statistics__progress" 
         :style="`
           --success-num: ${percent};
           --success-color: ${color};
@@ -12,14 +12,14 @@
           backgroundColor:${strokeColor}
         `"
       ></div>
-      <div class="info" v-if="showInfo">{{success}}/{{total}}</div>
+      <div class="ro-statistics__info" v-if="showInfo">{{success}}/{{total}}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'VueStatistics',
+  name: 'RoStatistics',
   props:{
     label:{
       required: true,
@@ -74,52 +74,53 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.statistics-container{
+.ro-statistics{
   display: flex;
+  .ro-statistics__section{
+    display: flex;
+    align-items: center;
+  }
+  .ro-statistics__label{
+    font-size: 12px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 12px;
+  }
+  .ro-statistics__progress{
+    margin: 0 10px;
+    background: #D2D2D2;
+    border-radius: 4px;
+    position: relative;
+    
+  }
+  .ro-statistics__progress::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--success-num);
+    background: var(--success-color);
+    border-radius: 4px;
+    transition: width 0.5s linear;
+  }
+  .ro-statistics__progress::after{
+    content: var(--addition-info);
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333333;
+  }
+  .ro-statistics__info{
+    font-size: 12px;
+    color: #333333;
+    line-height: 24px;
+  }
 }
-.section{
-  display: flex;
-  align-items: center;
-}
-.label{
-  font-size: 12px;
-  font-weight: 400;
-  color: #333333;
-  line-height: 12px;
-}
-.progress{
-  margin: 0 10px;
-  background: #D2D2D2;
-  border-radius: 4px;
-  position: relative;
-  
-}
-.progress::before{
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: var(--success-num);
-  background: var(--success-color);
-  border-radius: 4px;
-  transition: width 0.5s linear;
-}
-.progress::after{
-  content: var(--addition-info);
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: -20px;
-  font-size: 12px;
-  font-weight: 400;
-  color: #333333;
-}
-.info{
-  font-size: 12px;
-  color: #333333;
-  line-height: 24px;
-}
+
 </style>
 

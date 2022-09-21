@@ -1,18 +1,18 @@
 <template>
-  <div class="message-box-container" v-if="visible">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="title">{{title}}</div>
-        <i class="iconfont icon-close" @click="handleAction('close')"></i>
+  <div class="ro-messagebox" v-if="visible">
+    <div class="ro-messagebox__content">
+      <div class="ro-messagebox__header">
+        <div class="ro-messagebox__title">{{title}}</div>
+        <i class="ro-icon-close" @click="handleAction('close')"></i>
       </div>
-      <div class="modal-body">
+      <div class="ro-messagebox__body">
         <template v-if="!showInput">
-          <i class="iconfont icon-warnfill"></i><span>{{message}}</span>
+          <i class="ro-icon-warnfill"></i><span>{{message}}</span>
         </template>
       </div>
-      <div class="modal-footer">
-        <div class="btn" @click="handleAction('cancel')">取消</div>
-        <div class="btn" :type="type =='del' ? 'danger' : 'primary'" @click="handleAction('confirm')">确定</div>
+      <div class="ro-messagebox__footer">
+        <div class="ro-messagebox__btn" @click="handleAction('cancel')">取消</div>
+        <div class="ro-messagebox__btn" :type="type =='del' ? 'danger' : 'primary'" @click="handleAction('confirm')">确定</div>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'VueMessageBox',
+  name: 'RoMessageBox',
   props:{
     closeOnHashChange: {
       type: Boolean,
@@ -75,7 +75,7 @@ export default {
 };
 </script>
 <style lang='less' scoped>
-.message-box-container{
+.ro-messagebox{
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,0.2);
@@ -86,7 +86,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  .modal-content{
+  .ro-messagebox__content{
     width: 420px;
     background: #fff;
     border-radius: 8px;
@@ -94,7 +94,7 @@ export default {
     position: relative;
     box-sizing: border-box;
     padding-bottom: 40px;
-    .modal-header{
+    .ro-messagebox__header{
       height: 40px;
       display: flex;
       justify-content: space-between;
@@ -103,8 +103,7 @@ export default {
       padding: 0 10px;
       background: #409eff;
       user-select: none;
-      
-      .title{
+      .ro-messagebox__title{
         font-size: 14px;
         font-weight: 700;
         color: #fff;
@@ -115,7 +114,7 @@ export default {
         cursor: pointer;
       }
     }
-    .modal-body{
+    .ro-messagebox__body{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -127,7 +126,7 @@ export default {
         margin-right: 4px;
       }
     }
-    .modal-footer{
+    .ro-messagebox__footer{
       width: 100%;
       box-sizing: border-box;
       padding: 0 10px;
@@ -135,7 +134,7 @@ export default {
       justify-content: flex-end;
       position: absolute;
       bottom: 10px;
-      .btn{
+      .ro-messagebox__btn{
         height: 30px;
         cursor: pointer;
         padding: 0 10px;

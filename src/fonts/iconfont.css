@@ -3,31 +3,40 @@
   src: url('iconfont.ttf?t=1663408759408') format('truetype');
 }
 
-.iconfont {
+[class^="ro-icon-"], [class*=" ro-icon-"] {
   font-family: "iconfont" !important;
   font-size: 1.5em;
+
   font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-close:before {
+.ro-icon-close:before {
   content: "\e646";
 }
 
-.icon-edit:before {
+.ro-icon-edit:before {
   content: "\e649";
 }
 
-.icon-warnfill:before {
+.ro-icon-warnfill:before {
   content: "\e662";
 }
 
-.icon-settings:before {
+.ro-icon-settings:before {
   content: "\e68a";
 }
 
-.icon-delete:before {
+.ro-icon-delete:before {
   content: "\e6b4";
 }
 

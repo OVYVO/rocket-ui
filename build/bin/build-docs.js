@@ -8,9 +8,9 @@ var endOfLine = require('os').EOL;
 var OUTPUT_PATH_ENHANCEAPP = path.join(__dirname, '../../docs/.vuepress/enhanceApp.js');
 var OUTPUT_PATH_COMPONENTS = path.join(__dirname, '../../docs/.vuepress/components.js');
 var IMPORT_TEMPLATE = 'import {{name}} from \'@root/packages/{{package}}/src/main.vue\';';
-var IMPORT_PLUGIN = 'import {{name}} from \'@root/packages/{{package}}/src/main.js\';';
+// var IMPORT_PLUGIN = 'import {{name}} from \'@root/packages/{{package}}/src/main.js\';';
 var INSTALL_COMPONENT_TEMPLATE = '  {{name}}';
-var INSTALL_PLUGIN_TEMPLATE = '  {{name}}';
+// var INSTALL_PLUGIN_TEMPLATE = '  {{name}}';
 var COMPONENTLINK_TEMPLATE = `module.exports.links = [
 {{links}}
 ]`;
@@ -23,18 +23,11 @@ const components = [
 {{componentInstall}}
 ];
 
-const plugins = [
-{{pluginInstall}}
-]
-
 export default({
   Vue
 })=>{
   components.forEach(item=>{
     Vue.component(item.name, item);
-  })
-  plugins.forEach(item=>{
-    Vue.prototype['$'+item.name] = item
   })
 }`;
 
@@ -63,14 +56,6 @@ ComponentNames.forEach(name => {
     installTemplate.push(render(INSTALL_COMPONENT_TEMPLATE, {
       name: componentName
     }));
-  }else{
-    // includePluginTemplate.push(render(IMPORT_PLUGIN, {
-    //   name: componentName,
-    //   package: name
-    // }))
-    // installPluginTemplate.push(render(INSTALL_PLUGIN_TEMPLATE, {
-    //   name: componentName
-    // }));
   }
 });
 
