@@ -56,7 +56,7 @@
     "docs:build": "vuepress build docs",
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
-    "commit": "git-cz",
+    "commit": "git add . && git-cz",
     "lint": ""
   },
   "author": "vue12306@163.com",

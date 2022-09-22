@@ -7,7 +7,7 @@ module.exports = {
   ],
   // Level [0..2]: 0 disables the rule. For 1 it will be considered a warning for 2 an error.
   rules: {
-    'header-max-length': [2, 'always', 100],
+    'header-max-length': [2, 'always', 72],
     'scope-case': [2, 'always', 'lowerCase'],
     'subject-empty': [2, 'never'],
     'subject-case': [2, 'always', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
