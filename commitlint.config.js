@@ -5,32 +5,30 @@ module.exports = {
     'cz',
     'gitmoji'
   ],
+  // Level [0..2]: 0 disables the rule. For 1 it will be considered a warning for 2 an error.
   rules: {
-    'body-leading-blank': [2, 'always'],
-    'footer-leading-blank': [1, 'always'],
-    'header-max-length': [2, 'always', 108],
+    'header-max-length': [2, 'always', 100],
+    'scope-case': [2, 'always', 'lowerCase'],
     'subject-empty': [2, 'never'],
+    'subject-case': [2, 'always', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
+    'subject-full-stop': [2, 'never', '.'],
     'type-empty': [2, 'never'],
-    'subject-case': [0],
-    'type-enum': [
-      2,
-      'always',
+    'type-case': [2, 'always', 'lowerCase'],
+    'type-enum': [2, 'always',
       [
         'feat',
         'fix',
-        'perf',
-        'style',
         'docs',
-        'test',
+        'style',
         'refactor',
-        'build',
-        'ci',
+        'perf',
+        'test',
         'chore',
         'revert',
-        'wip',
-        'workflow',
-        'types',
-        'release'
+        'init',
+        'ci',
+        'build',
+        'WIP'
       ]
     ]
   }
