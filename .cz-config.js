@@ -1,4 +1,5 @@
-// .cz-config.js
+//https://github.com/leoforfree/cz-customizable/blob/master/cz-config-EXAMPLE.js
+
 module.exports = {
   types: [
     { value: ':sparkles: feat', name: '✨ feat: 一项新功能' },
@@ -15,47 +16,10 @@ module.exports = {
     { value: ':package: build', name: '📦️ build: 变更项目构建或外部依赖' },
     { value: ':construction: WIP', name: '🚧 WIP: 进行中的工作' }
   ],
-  // scopes: [
-  //   { name: 'build' },
-  //   { name: 'packages' },
-  //   { name: 'docs' },
-  //   { name: 'src' },
-  //   { name: 'examples' },
-  //   { name: 'play' }
-  // ],
-  // allowTicketNumber: false,
-  // isTicketNumberRequired: false,
-  // ticketNumberPrefix: 'TICKET-',
-  // ticketNumberRegExp: '\\d{1,5}',
-  // it needs to match the value for field type. Eg.: 'fix'
-  // scopeOverrides: {
-  //   feat: [
-  //     { name: 'element' }
-  //   ],
-  //   fix: [
-  //     { name: 'element' },
-  //     { name: 'style' },
-  //   ]
-  // },
-  // override the messages, defaults are as follows
   messages: {
     type: '请选择提交类型(必填):',
-    // scope: '请选择一个scope (可选):',
-    // customScope: '请输入文件修改范围(可选):',
-    // used if allowCustomScopes is true
     subject: '请简要描述提交(必填):',
-    // body: '请输入详细描述，使用"|"换行(可选):\n',
-    // breaking: '列出任务非兼容性说明 (可选):\n',
-    // footer: '请输入要关闭的issue，例如：#12, #34(可选):\n',
     confirmCommit: '确定提交此说明吗？'
   },
-  allowCustomScopes: true,
-  allowBreakingChanges: ['feat', 'fix'],
-  // 限制 subject 长度
-  subjectLimit: 72,
-  // 跳过问题 skip any questions you want
-  skipQuestions: ['body','footer','breaking', 'customScope'],
-  // breaklineChar: '|', // It is supported for fields body and footer.
-  // footerPrefix : 'ISSUES CLOSED:'
-  // askForBreakingChangeFirst : true, // default is false
+  skipQuestions: ['scope', 'body', 'breaking', 'footer']
 }
