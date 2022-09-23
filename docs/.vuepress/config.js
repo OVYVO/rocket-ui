@@ -13,7 +13,7 @@ module.exports={
     }
   },
   themeConfig: {
-    title: 'Rocket-UI',
+    title: 'Rockets-UI',
     description: '简易组件库',
     logo: '/rocket.png',
     smoothScroll: true,
