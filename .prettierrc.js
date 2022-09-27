@@ -3,7 +3,7 @@ module.exports = {
   printWidth: 120,
   // 指定每个缩进级别的空格数
   tabWidth: 2,
-  // 使用制表符 (tab) 缩进
+  // 用tab替代space缩进
   useTabs: false,
   // 在语句末尾打印分号
   semi: false,
@@ -17,4 +17,6 @@ module.exports = {
   jsxBracketSameLine: false,
   // auto | lf | crlf | cr
   endOfLine: 'auto',
+  // 在单个箭头函数参数周围包括括号。
+  arrowParens: 'avoid'
 }

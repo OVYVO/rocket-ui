@@ -65,7 +65,7 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
     "commit": "git add . && git-cz",
-    "lint-staged": "lint-staged -c ./.husky/lint-staged.config.js"
+    "prepare": "husky install"
   },
   "author": "vue12306@163.com",
   "repository": {
@@ -87,5 +87,9 @@
     "commitizen": {
       "path": "node_modules/cz-customizable"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.vue": ["eslint --fix", "prettier --write"]
   }
 }
