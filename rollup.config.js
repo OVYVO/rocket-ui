@@ -8,7 +8,7 @@ import { terser } from 'rollup-plugin-terser'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
-import alias from '@rollup/plugin-alias';
+import alias from '@rollup/plugin-alias'
 
 const isDev = process.env.NODE_ENV !== 'production'
 
@@ -27,15 +27,13 @@ const plugins = [
     // 把 css 插入到 style 中
     // inject: true,
     // 把 css 放到和js同一目录
-    extract: "index.css",
-    plugins: [
-      autoprefixer()
-    ]
+    extract: 'index.css',
+    plugins: [autoprefixer()]
   }),
   babel({
     exclude: 'node_modules/**',
     // 使plugin-transform-runtime生效
-    runtimeHelpers: true,
+    runtimeHelpers: true
   }),
   alias({
     entries: [
@@ -57,7 +55,7 @@ module.exports = {
     {
       exports: 'auto',
       file: path.resolve('lib/components.cjs.js'),
-      format: 'cjs' 
+      format: 'cjs'
     },
     {
       exports: 'auto',
@@ -67,9 +65,8 @@ module.exports = {
     {
       format: 'umd',
       file: path.resolve('lib/components.umd.js'),
-      name: 'rockets-ui', //打包后的全局变量名称 如：window.RocketsUI
-    } 
+      name: 'rockets-ui' //打包后的全局变量名称 如：window.RocketsUI
+    }
   ],
   plugins: plugins
 }
-
