@@ -41,6 +41,7 @@
     "husky": "^7.0.4",
     "json-templater": "^1.2.0",
     "less-loader": "7",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "rollup": "^2.38.4",
     "rollup-plugin-babel": "^4.4.0",
@@ -64,7 +65,7 @@
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
     "commit": "git add . && git-cz",
-    "lint": ""
+    "lint-staged": "lint-staged -c ./.husky/lint-staged.config.js"
   },
   "author": "vue12306@163.com",
   "repository": {
