@@ -3,4 +3,4 @@
 
 #会执行commitlint.config.js中的一些操作
 
-# npx --no -- commitlint --edit ${1}
+npx --no -- commitlint --edit ${1}

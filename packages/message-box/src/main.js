@@ -37,6 +37,7 @@ const modalControl = ()=>{
       currentMessage = msgQueue.shift()
       let {options} = currentMessage
       Object.keys(options).forEach(prop=>{
+        // eslint-disable-next-line no-prototype-builtins
         if(options.hasOwnProperty(prop)){
           instance[prop] = options[prop]
         }

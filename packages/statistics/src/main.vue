@@ -1,8 +1,11 @@
 <template>
   <div class="ro-statistics">
     <div class="ro-statistics__section">
-      <div class="ro-statistics__label">{{label}}:</div>
-      <div class="ro-statistics__progress" 
+      <div class="ro-statistics__label">
+        {{ label }}: 
+      </div>
+      <div
+        class="ro-statistics__progress" 
         :style="`
           --success-num: ${percent};
           --success-color: ${color};
@@ -11,8 +14,13 @@
           height:${strokeHeight};
           backgroundColor:${strokeColor}
         `"
-      ></div>
-      <div class="ro-statistics__info" v-if="showInfo">{{success}}/{{total}}</div>
+      />
+      <div 
+        v-if="showInfo" 
+        class="ro-statistics__info"
+      >
+        {{ success }}/{{ total }}
+      </div>
     </div>
   </div>
 </template>
