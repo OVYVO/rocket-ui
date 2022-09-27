@@ -38,7 +38,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.5.1",
     "file-save": "^0.2.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "json-templater": "^1.2.0",
     "less-loader": "7",
     "lint-staged": "^13.0.3",
@@ -89,7 +89,13 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
-    "*.vue": ["eslint --fix", "prettier --write"]
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
