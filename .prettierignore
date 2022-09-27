@@ -1,0 +1,7 @@
+.github
+.husky
+/node_modules/**
+/example/*
+/lib/*
+**/*.svg
+**/*.sh

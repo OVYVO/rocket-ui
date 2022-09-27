@@ -1,18 +1,38 @@
 <template>
-  <div class="ro-messagebox" v-if="visible">
+  <div 
+    v-if="visible"
+    class="ro-messagebox"
+  >
     <div class="ro-messagebox__content">
       <div class="ro-messagebox__header">
         <div class="ro-messagebox__title">{{title}}</div>
-        <i class="ro-icon-close" @click="handleAction('close')"></i>
+        <i 
+          class="ro-icon-close"
+          @click="handleAction('close')" 
+        />       
       </div>
       <div class="ro-messagebox__body">
         <template v-if="!showInput">
-          <i class="ro-icon-warnfill"></i><span>{{message}}</span>
+          <i class="ro-icon-warnfill" />
+          <span>
+            {{ message }}
+          </span>
         </template>
       </div>
       <div class="ro-messagebox__footer">
-        <div class="ro-messagebox__btn" @click="handleAction('cancel')">取消</div>
-        <div class="ro-messagebox__btn" :type="type =='del' ? 'danger' : 'primary'" @click="handleAction('confirm')">确定</div>
+        <div 
+          class="ro-messagebox__btn" 
+          @click="handleAction('cancel')"
+        >
+          取消
+        </div>
+        <div 
+          class="ro-messagebox__btn" 
+          :type="type =='del' ? 'danger' : 'primary'" 
+          @click="handleAction('confirm')"
+        >
+          确定
+        </div>
       </div>
     </div>
   </div>

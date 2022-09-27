@@ -1,5 +1,7 @@
 <template>
-  <i :class="`ro-icon-${name}`"></i>
+  <i 
+    :class="`ro-icon-${name}`"
+  />
 </template>
 
 <script>
