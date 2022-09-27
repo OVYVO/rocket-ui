@@ -1,7 +1,7 @@
 module.exports = {
   ignores: [commit => commit.includes('init')],
-  extends: ['@commitlint/config-conventional', 'cz', 'gitmoji'],
-  // Level [0..2]: 0 disables the rule. For 1 it will be considered a warning for 2 an error.
+  extends: ['@commitlint/config-conventional', 'cz'],
+  // Level [0.1.2]: 0 disables the rule. For 1 it will be considered a warning for 2 an error.
   rules: {
     'header-max-length': [2, 'always', 72],
     'scope-case': [2, 'always', 'lowerCase'],

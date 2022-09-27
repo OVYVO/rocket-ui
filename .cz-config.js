@@ -1,4 +1,5 @@
 //https://github.com/leoforfree/cz-customizable/blob/master/cz-config-EXAMPLE.js
+process.env.GITMOJI_PATH = '.gitmoji.json'
 
 module.exports = {
   types: [
