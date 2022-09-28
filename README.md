@@ -18,11 +18,15 @@
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
   </a>
+  <a href="COMMITIZEN">
+    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg">
+  </a>
 </p>
 
-> 适用于Vue2.0的简易组件库
+> 适用于 Vue2.0 的简易组件库
 
 ## 安装
+
 ```shell
 npm install rockets-ui -S
 // or
@@ -32,7 +36,8 @@ cnpm install rockets-ui -S
 ```
 
 ## 快速开始
-``` javascript
+
+```javascript
 import Vue from 'vue'
 import RocketsUI from 'rockets-ui'
 import 'rockets-ui/lib/index.css'
@@ -48,12 +53,13 @@ import 'rockets-ui/lib/index.css'
 
 Vue.component(Statistics.name, Statistics)
 ```
+
 > 详情参见 [快速开始](https://ovyvo.github.io/rocket-ui/guide/install.html) 文档.
 
 ## 链接
+
 - 项目搭建及技术点分析详见[个人博客](https://ovyvo.github.io/yanblog.github.io/)
 
 ## LICENSE
+
 [MIT](LICENSE)
-
-

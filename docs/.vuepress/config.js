@@ -1,14 +1,12 @@
 const path = require('path')
-const components = require('./components.js') 
+const components = require('./components.js')
 
-module.exports={
-  base:'/rocket-ui/',  
+module.exports = {
+  base: '/rocket-ui/',
   title: 'Rockets-UI',
-  head: [
-    ['link',{ rel:'icon',href: '/rocket.png'}]
-  ],
-  locales:{
-    "/":{
+  head: [['link', { rel: 'icon', href: '/rocket.png' }]],
+  locales: {
+    '/': {
       lang: 'zh-CN'
     }
   },
@@ -19,19 +17,17 @@ module.exports={
     smoothScroll: true,
     nav: [
       { text: '首页', link: '/' },
-      { text: '组件', link: '/guide/install'},
-      { text: '博客', link: 'https://ovyvo.github.io/yanblog.github.io/'},
-      { text: 'github', link: 'https://github.com/OVYVO/vue-utils'}
+      { text: '组件', link: '/guide/install' },
+      { text: '博客', link: 'https://ovyvo.github.io/yanblog.github.io/' },
+      { text: 'github', link: 'https://github.com/OVYVO/vue-utils' }
     ],
     sidebar: [
-      ['/','首页'],
+      ['/', '首页'],
       {
         title: '开发指南',
         path: '/guide/install',
         sidebarDepth: '1',
-        children: [
-          ['/guide/install','安装及使用']
-        ]
+        children: [['/guide/install', '安装及使用']]
       },
       {
         title: '组件实例',
@@ -41,10 +37,7 @@ module.exports={
       }
     ]
   },
-  plugins: [
-    ['@vuepress/back-to-top'],
-    ['demo-container']
-  ],
+  plugins: [['@vuepress/back-to-top'], ['demo-container']],
   configureWebpack: {
     resolve: {
       alias: {

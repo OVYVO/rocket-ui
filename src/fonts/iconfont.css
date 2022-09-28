@@ -1,10 +1,11 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
+  font-family: 'iconfont'; /* Project id  */
   src: url('iconfont.ttf?t=1663408759408') format('truetype');
 }
 
-[class^="ro-icon-"], [class*=" ro-icon-"] {
-  font-family: "iconfont" !important;
+[class^='ro-icon-'],
+[class*=' ro-icon-'] {
+  font-family: 'iconfont' !important;
   font-size: 1.5em;
 
   font-style: normal;
@@ -21,22 +22,21 @@
 }
 
 .ro-icon-close:before {
-  content: "\e646";
+  content: '\e646';
 }
 
 .ro-icon-edit:before {
-  content: "\e649";
+  content: '\e649';
 }
 
 .ro-icon-warnfill:before {
-  content: "\e662";
+  content: '\e662';
 }
 
 .ro-icon-settings:before {
-  content: "\e68a";
+  content: '\e68a';
 }
 
 .ro-icon-delete:before {
-  content: "\e6b4";
+  content: '\e6b4';
 }
-

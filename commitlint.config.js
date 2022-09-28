@@ -1,7 +1,12 @@
 module.exports = {
   ignores: [commit => commit.includes('init')],
-  extends: ['@commitlint/config-conventional', 'cz'],
-  // Level [0.1.2]: 0 disables the rule. For 1 it will be considered a warning for 2 an error.
+  extends: ['gitmoji'],
+  parserPreset: {
+    parserOpts: {
+      headerPattern: /^(:\w*:)(?:\s)(?:\((.*?)\))?\s((?:.*(?=\())|.*)(?:\(#(\d*)\))?/,
+      headerCorrespondence: ['type', 'scope', 'subject', 'ticket']
+    }
+  },
   rules: {
     'header-max-length': [2, 'always', 72],
     'scope-case': [2, 'always', 'lowerCase'],
@@ -10,10 +15,6 @@ module.exports = {
     'subject-full-stop': [2, 'never', '.'],
     'type-empty': [2, 'never'],
     'type-case': [2, 'always', 'lowerCase'],
-    'type-enum': [
-      2,
-      'always',
-      ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore', 'revert', 'init', 'ci', 'build', 'WIP']
-    ]
+    'type-enum': [2, 'always', ['feat', 'fix', 'docs', 'style']]
   }
 }
