@@ -1,18 +1,16 @@
 <template>
-  <i 
-    :class="`ro-icon-${name}`"
-  />
+  <i :class="`ro-icon-${name}`" />
 </template>
 
 <script>
 export default {
   name: 'RoIcon',
-  props:{
-    name:{
+  props: {
+    name: {
       type: String,
-      default: "",
+      default: '',
       required: true
     }
   }
-};
+}
 </script>

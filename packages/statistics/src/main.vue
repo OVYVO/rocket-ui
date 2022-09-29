@@ -1,11 +1,9 @@
 <template>
   <div class="ro-statistics">
     <div class="ro-statistics__section">
-      <div class="ro-statistics__label">
-        {{ label }}: 
-      </div>
+      <div class="ro-statistics__label">{{ label }}:</div>
       <div
-        class="ro-statistics__progress" 
+        class="ro-statistics__progress"
         :style="`
           --success-num: ${percent};
           --success-color: ${color};
@@ -15,12 +13,7 @@
           backgroundColor:${strokeColor}
         `"
       />
-      <div 
-        v-if="showInfo" 
-        class="ro-statistics__info"
-      >
-        {{ success }}/{{ total }}
-      </div>
+      <div v-if="showInfo" class="ro-statistics__info">{{ success }}/{{ total }}</div>
     </div>
   </div>
 </template>
@@ -28,80 +21,79 @@
 <script>
 export default {
   name: 'RoStatistics',
-  props:{
-    label:{
+  props: {
+    label: {
       required: true,
       type: String,
-      default: "请输入标题"
+      default: '请输入标题'
     },
-    total:{
+    total: {
       required: true,
       type: Number,
       default: 0
     },
-    success:{
+    success: {
       required: true,
       type: Number,
-      default: 0,
+      default: 0
     },
-    color:{
+    color: {
       type: String,
       default: '#FF9E0D'
     },
-    strokeWidth:{
+    strokeWidth: {
       type: String,
       default: '200px'
     },
-    strokeHeight:{
+    strokeHeight: {
       type: String,
       default: '20px'
     },
-    strokeColor:{
+    strokeColor: {
       type: String,
       default: '#D2D2D2'
     },
-    additionInfo:{
+    additionInfo: {
       type: String,
       default: ''
     },
-    showInfo:{
+    showInfo: {
       type: Boolean,
       default: false
     }
   },
-  computed:{
-    percent(){
+  computed: {
+    percent() {
       // 解决数据异常,样式怪异兼容
-      if(this.success  > this.total){
+      if (this.success > this.total) {
         return '100%'
-      }else{
-        return `${Math.floor((this.success*100)/this.total)}%`
+      } else {
+        return `${Math.floor((this.success * 100) / this.total)}%`
       }
     }
   }
 }
 </script>
 <style lang="less" scoped>
-.ro-statistics{
+.ro-statistics {
   display: flex;
-  .ro-statistics__section{
+  .ro-statistics__section {
     display: flex;
     align-items: center;
   }
-  .ro-statistics__label{
+  .ro-statistics__label {
     font-size: 12px;
     font-weight: 400;
     color: #333333;
     line-height: 12px;
   }
-  .ro-statistics__progress{
+  .ro-statistics__progress {
     margin: 0 10px;
-    background: #D2D2D2;
+    background: #d2d2d2;
     border-radius: 4px;
     position: relative;
-    
   }
-  .ro-statistics__progress::before{
+  .ro-statistics__progress::before {
     content: '';
     display: block;
     position: absolute;
@@ -113,7 +105,7 @@ export default {
     border-radius: 4px;
     transition: width 0.5s linear;
   }
-  .ro-statistics__progress::after{
+  .ro-statistics__progress::after {
     content: var(--addition-info);
     display: block;
     position: absolute;
@@ -123,12 +115,10 @@ export default {
     font-weight: 400;
     color: #333333;
   }
-  .ro-statistics__info{
+  .ro-statistics__info {
     font-size: 12px;
     color: #333333;
     line-height: 24px;
   }
 }
-
 </style>
-

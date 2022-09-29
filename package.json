@@ -31,7 +31,6 @@
     "commitlint-config-cz": "^0.13.3",
     "commitlint-config-gitmoji": "^2.2.5",
     "cross-env": "^7.0.3",
-    "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
@@ -64,8 +63,9 @@
     "docs:build": "vuepress build docs",
     "build": "cross-env NODE_ENV=production rollup -c",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
-    "commit": "git add . && git-cz",
-    "prepare": "husky install"
+    "cz": "git add . && git-cz",
+    "prepare": "husky install",
+    "lint:prettier": "npx prettier -w ."
   },
   "author": "vue12306@163.com",
   "repository": {
@@ -86,6 +86,11 @@
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
   },
   "lint-staged": {

@@ -1,5 +1,7 @@
 #### 基础用法
+
 ::: demo
+
 ```vue
 <template>
   <div class="icon-list">
@@ -11,9 +13,10 @@
   </div>
 </template>
 <style>
-  .icon-list > i{
-    margin-right: 20px;
-  }
+.icon-list > i {
+  margin-right: 20px;
+}
 </style>
-``` 
+```
+
 :::
