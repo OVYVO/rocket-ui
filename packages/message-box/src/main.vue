@@ -7,7 +7,7 @@
       </div>
       <div class="ro-messagebox__body">
         <template v-if="!showInput">
-          <i class="ro-icon-warnfill" />
+          <i class="ro-icon-warning-circle" />
           <span>
             {{ message }}
           </span>
@@ -113,7 +113,7 @@ export default {
         font-weight: 700;
         color: #fff;
       }
-      /deep/ .iconfont {
+      i {
         font-size: 18px;
         color: #fff;
         cursor: pointer;
