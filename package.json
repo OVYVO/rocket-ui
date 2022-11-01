@@ -1,7 +1,7 @@
 {
   "name": "rockets-ui",
   "version": "1.0.2",
-  "description": "适用于vue2.0的组件库",
+  "description": "适用于vue2.x的组件库",
   "license": "ISC",
   "main": "lib/components.es.js",
   "keywords": [
