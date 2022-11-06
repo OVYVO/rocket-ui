@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         title: '组件实例',
-        path: '/components/statistics',
+        path: '/components/icon',
         sidebarDepth: '1',
         children: components.links
       }

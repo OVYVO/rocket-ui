@@ -2,7 +2,7 @@
 home: true
 heroImage: /indexBac.png
 heroText: Rockets-UI
-tagline: 适用于Vue2.0的简易组件库
+tagline: 适用于Vue2.x的简易组件库
 actionText: 快速上手 →
 actionLink: /guide/install
 features:
