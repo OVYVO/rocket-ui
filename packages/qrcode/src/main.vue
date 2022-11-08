@@ -14,11 +14,19 @@ export default {
     },
     width: {
       type: [String, Number],
-      default: 200
+      default: ''
     },
     height: {
       type: [String, Number],
-      default: 200
+      default: ''
+    },
+    darkColor: {
+      type: String,
+      default: '#000000'
+    },
+    lightColor: {
+      type: String,
+      default: '#ffffff'
     }
   },
   computed: {
@@ -50,11 +58,24 @@ export default {
       if (!this.url) return
       const { canvas } = this.$refs
       const QRcode = require('qrcode')
-      QRcode.toCanvas(canvas, this.url, { width: this.width, height: this.height, margin: '1' }, err => {
-        if (err) {
-          console.error(err)
+      QRcode.toCanvas(
+        canvas,
+        this.url,
+        {
+          width: this.width,
+          height: this.height,
+          margin: '1',
+          color: {
+            dark: this.darkColor,
+            light: this.lightColor
+          }
+        },
+        err => {
+          if (err) {
+            console.error(err)
+          }
         }
-      })
+      )
     }
   }
 }
