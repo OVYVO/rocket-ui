@@ -41,16 +41,16 @@ export default ${ComponentName}`
   {
     filename: 'src/main.vue',
     content: `<template>
-  <div class="${componentName}-container"></div>
+  <div class="ro-${componentName}"></div>
 </template>
 
 <script>
 export default {
-  name: 'Vue${ComponentName}'
-};
+  name: 'Ro${ComponentName}'
+}
 </script>
-<style lang='less' scoped>
-.${componentName}-container{
+<style lang="less" scoped>
+.ro-${componentName}{
 
 }
 </style>`

@@ -5,15 +5,15 @@ import '../styles/index.less'
 
 import Statistics from '@root/packages/statistics/src/main.vue'
 import Icon from '@root/packages/icon/src/main.vue'
+import Qrcode from '@root/packages/qrcode/src/main.vue'
 import MessageBox from '@root/packages/message-box/src/main.js'
 
-const components = [Statistics, Icon]
+const components = [Statistics, Icon, Qrcode]
 
 export default ({ Vue }) => {
   components.forEach(item => {
     Vue.component(item.name, item)
   })
-
   Vue.prototype.$icon = icon.glyphs
   Vue.prototype.$confirm = MessageBox
 }
