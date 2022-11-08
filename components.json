@@ -10,5 +10,9 @@
   "icon": {
     "path": "/packages/icon/index.js",
     "name": "图标"
+  },
+  "qrcode": {
+    "path": "/packages/qrcode/index.js",
+    "name": "二维码"
   }
 }

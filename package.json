@@ -16,6 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "core-js": "^3.8.3",
+    "qrcode": "^1.5.1",
     "vue": "^2.6.12"
   },
   "devDependencies": {
