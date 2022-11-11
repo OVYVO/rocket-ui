@@ -1,5 +1,6 @@
 <template>
-  <div class="ro-imageview" :style="{ zIndex: zIndex }" @click.self="maskClosable && close">
+  <div class="ro-imageview" :style="{ zIndex: zIndex }">
+    <div class="ro-imageview-mask" @click.self="maskClosable && close()"></div>
     <div class="ro-imageview_closebtn">
       <i class="ro-icon-close" @click="close"></i>
     </div>
@@ -32,6 +33,7 @@
 </template>
 
 <script>
+import { rafThrottle } from '@src/utils.js'
 export default {
   name: 'RoImageview',
   props: {
@@ -45,7 +47,7 @@ export default {
     },
     maskClosable: {
       type: Boolean,
-      default: true
+      default: false
     },
     onClose: {
       type: Function,
@@ -142,7 +144,7 @@ export default {
       if (this.loading) return
       const { pageX: startX, pageY: startY } = e
       const { offsetX, offsetY } = this.transform
-      const dragHandle = this.rafThrottle(ev => {
+      const dragHandle = rafThrottle(ev => {
         this.transform.offsetX = offsetX + ev.pageX - startX
         this.transform.offsetY = offsetY + ev.pageY - startY
       })
@@ -190,6 +192,7 @@ export default {
       }
     },
     close() {
+      console.log(123)
       this.onClose()
     },
     handleImgLoad() {
@@ -198,17 +201,6 @@ export default {
     handleImgError(e) {
       this.loading = false
       e.target.alt = '加载失败'
-    },
-    rafThrottle(fn) {
-      let locked = false
-      return function (...args) {
-        if (locked) return
-        locked = true
-        window.requestAnimationFrame(() => {
-          fn.apply(this, args)
-          locked = false
-        })
-      }
     }
   }
 }
@@ -223,6 +215,13 @@ export default {
   left: 0;
   top: 0;
   user-select: none;
+  .ro-imageview-mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .ro-imageview_closebtn {
     width: 50px;
     height: 50px;
@@ -233,8 +232,8 @@ export default {
     align-items: center;
     position: absolute;
     z-index: 999;
-    right: 10%;
-    top: 10%;
+    right: 5%;
+    top: 5%;
     i {
       font-size: 30px;
       color: #fff;
@@ -248,7 +247,7 @@ export default {
     z-index: 999;
     left: 0;
     right: 0;
-    bottom: 10%;
+    bottom: 5%;
     margin: 0 auto;
     display: flex;
     align-items: center;
