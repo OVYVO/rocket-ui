@@ -14,5 +14,9 @@
   "qrcode": {
     "path": "/packages/qrcode/index.js",
     "name": "二维码"
+  },
+  "imageview": {
+    "path": "/packages/imageview/index.js",
+    "name": "图片预览"
   }
 }
