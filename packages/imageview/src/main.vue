@@ -47,7 +47,7 @@ export default {
     },
     maskClosable: {
       type: Boolean,
-      default: false
+      default: true
     },
     onClose: {
       type: Function,
