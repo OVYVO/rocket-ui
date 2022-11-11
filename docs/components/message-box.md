@@ -19,12 +19,12 @@ export default {
         title: '警告信息',
         message: '确定要执行该操作吗？'
       })
-      .then(res => {
-        console.log(123)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+        .then(res => {
+          console.log(123)
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
 }
@@ -39,16 +39,17 @@ export default {
 
 #### 单独引入
 
-如果想单独引入MessageBox:
+如果想单独引入 MessageBox:
 
 ```javascript
-  import { MessageBox } from 'rockets-ui';
+import { MessageBox } from 'rockets-ui'
 ```
+
 使用方式及参数参考样例。
 
 ### 参数说明
 
-| 参数         | 说明             | 类型    | 可选值 | 默认值     |
-| ------------ | ---------------- | ------- | ------ | ---------- |
-| title        | 标题名称          | string  | 必填   | - |
-| message      | 提示内容          | string  | 必填   | - |
+| 参数    | 说明     | 类型   | 可选值 | 默认值 |
+| ------- | -------- | ------ | ------ | ------ |
+| title   | 标题名称 | string | 必填   | -      |
+| message | 提示内容 | string | 必填   | -      |
