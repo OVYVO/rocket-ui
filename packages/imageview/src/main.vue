@@ -1,17 +1,14 @@
 <template>
   <div class="ro-imageview" :style="{ zIndex: zIndex }" @click.self="maskClosable && close">
     <div class="ro-imageview_closebtn">
-      <i class="el-icon-close" @click="close"></i>
+      <i class="ro-icon-close" @click="close"></i>
     </div>
     <div class="ro-imageview_actiontab">
-      <i class="el-icon-zoom-in" @click="handleAction('zoomin')"></i>
-      <i class="el-icon-zoom-out" @click="handleAction('zoomout')"></i>
-      <i
-        :class="[mode == 'contain' ? 'el-icon-c-scale-to-original' : 'ro-icon-fullscreen']"
-        @click="handleAction('fullscreen')"
-      ></i>
-      <i class="el-icon-refresh-left" @click="handleAction('rotatel')"></i>
-      <i class="el-icon-refresh-right" @click="handleAction('rotater')"></i>
+      <i class="ro-icon-zoomin" @click="handleAction('zoomin')"></i>
+      <i class="ro-icon-zoomout" @click="handleAction('zoomout')"></i>
+      <i :class="[mode == 'contain' ? 'ro-icon-expend' : 'ro-icon-icon-test']" @click="handleAction('fullscreen')"></i>
+      <i class="ro-icon-undo" @click="handleAction('rotatel')"></i>
+      <i class="ro-icon-redo" @click="handleAction('rotater')"></i>
     </div>
     <template v-if="!isSingle">
       <i class="ro-imageview_arrow ro-imageview_arrowpre ro-icon-left" @click="handleArrowClick('pre')"></i>
@@ -235,6 +232,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 999;
     right: 10%;
     top: 10%;
     i {

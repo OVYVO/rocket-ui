@@ -16,7 +16,6 @@ export default ({ Vue }) => {
   components.forEach(item => {
     Vue.component(item.name, item)
   })
-  console.log(icon)
   Vue.prototype.$icon = icon.glyphs
   Vue.prototype.$confirm = MessageBox
 }
