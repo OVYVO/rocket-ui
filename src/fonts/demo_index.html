@@ -47,6 +47,8 @@
         <li class="dib"><span>Symbol</span></li>
       </ul>
       
+      <a href="https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=3764737" target="_blank" class="nav-more">查看项目</a>
+      
     </div>
     <div class="tab-container">
       <div class="content unicode" style="display: block;">
@@ -174,50 +176,62 @@
           
             <li class="dib">
               <span class="icon iconfont">&#xe791;</span>
-                <div class="name">message</div>
+                <div class="name">undo</div>
                 <div class="code-name">&amp;#xe791;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe792;</span>
-                <div class="name">dashboard</div>
+                <div class="name">redo</div>
                 <div class="code-name">&amp;#xe792;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe793;</span>
-                <div class="name">poweroff</div>
+                <div class="name">message</div>
                 <div class="code-name">&amp;#xe793;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe794;</span>
-                <div class="name">pie chart</div>
+                <div class="name">dashboard</div>
                 <div class="code-name">&amp;#xe794;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe795;</span>
-                <div class="name">setting</div>
+                <div class="name">poweroff</div>
                 <div class="code-name">&amp;#xe795;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe796;</span>
-                <div class="name">eye</div>
+                <div class="name">pie chart</div>
                 <div class="code-name">&amp;#xe796;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe797;</span>
-                <div class="name">location</div>
+                <div class="name">setting</div>
                 <div class="code-name">&amp;#xe797;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe798;</span>
-                <div class="name">edit-square</div>
+                <div class="name">eye</div>
                 <div class="code-name">&amp;#xe798;</div>
+              </li>
+          
+            <li class="dib">
+              <span class="icon iconfont">&#xe799;</span>
+                <div class="name">location</div>
+                <div class="code-name">&amp;#xe799;</div>
+              </li>
+          
+            <li class="dib">
+              <span class="icon iconfont">&#xe79a;</span>
+                <div class="name">edit-square</div>
+                <div class="code-name">&amp;#xe79a;</div>
               </li>
           
             <li class="dib">
@@ -756,14 +770,26 @@
           
             <li class="dib">
               <span class="icon iconfont">&#xe897;</span>
-                <div class="name">audio</div>
+                <div class="name">zoom out</div>
                 <div class="code-name">&amp;#xe897;</div>
               </li>
           
             <li class="dib">
               <span class="icon iconfont">&#xe898;</span>
-                <div class="name">audio-fill</div>
+                <div class="name">audio</div>
                 <div class="code-name">&amp;#xe898;</div>
+              </li>
+          
+            <li class="dib">
+              <span class="icon iconfont">&#xe899;</span>
+                <div class="name">audio-fill</div>
+                <div class="code-name">&amp;#xe899;</div>
+              </li>
+          
+            <li class="dib">
+              <span class="icon iconfont">&#xe89a;</span>
+                <div class="name">zoom in</div>
+                <div class="code-name">&amp;#xe89a;</div>
               </li>
           
             <li class="dib">
@@ -845,6 +871,18 @@
               </li>
           
             <li class="dib">
+              <span class="icon iconfont">&#xe912;</span>
+                <div class="name">1:1</div>
+                <div class="code-name">&amp;#xe912;</div>
+              </li>
+          
+            <li class="dib">
+              <span class="icon iconfont">&#xe914;</span>
+                <div class="name">expend</div>
+                <div class="code-name">&amp;#xe914;</div>
+              </li>
+          
+            <li class="dib">
               <span class="icon iconfont">&#xe916;</span>
                 <div class="name">send</div>
                 <div class="code-name">&amp;#xe916;</div>
@@ -868,7 +906,9 @@
 <pre><code class="language-css"
 >@font-face {
   font-family: 'iconfont';
-  src: url('iconfont.ttf?t=1665304409927') format('truetype');
+  src: url('iconfont.woff2?t=1668148513937') format('woff2'),
+       url('iconfont.woff?t=1668148513937') format('woff'),
+       url('iconfont.ttf?t=1668148513937') format('truetype');
 }
 </code></pre>
           <h3 id="-iconfont-">第二步：定义使用 iconfont 的样式</h3>
@@ -1071,6 +1111,24 @@
               sync
             </div>
             <div class="code-name">.icon-sync
+            </div>
+          </li>
+          
+          <li class="dib">
+            <span class="icon iconfont icon-undo"></span>
+            <div class="name">
+              undo
+            </div>
+            <div class="code-name">.icon-undo
+            </div>
+          </li>
+          
+          <li class="dib">
+            <span class="icon iconfont icon-redo"></span>
+            <div class="name">
+              redo
+            </div>
+            <div class="code-name">.icon-redo
             </div>
           </li>
           
@@ -1948,6 +2006,15 @@
           </li>
           
           <li class="dib">
+            <span class="icon iconfont icon-zoomout"></span>
+            <div class="name">
+              zoom out
+            </div>
+            <div class="code-name">.icon-zoomout
+            </div>
+          </li>
+          
+          <li class="dib">
             <span class="icon iconfont icon-audio"></span>
             <div class="name">
               audio
@@ -1962,6 +2029,15 @@
               audio-fill
             </div>
             <div class="code-name">.icon-audio-fill
+            </div>
+          </li>
+          
+          <li class="dib">
+            <span class="icon iconfont icon-zoomin"></span>
+            <div class="name">
+              zoom in
+            </div>
+            <div class="code-name">.icon-zoomin
             </div>
           </li>
           
@@ -2079,6 +2155,24 @@
               eye-close
             </div>
             <div class="code-name">.icon-eye-close
+            </div>
+          </li>
+          
+          <li class="dib">
+            <span class="icon iconfont icon-icon-test"></span>
+            <div class="name">
+              1:1
+            </div>
+            <div class="code-name">.icon-icon-test
+            </div>
+          </li>
+          
+          <li class="dib">
+            <span class="icon iconfont icon-expend"></span>
+            <div class="name">
+              expend
+            </div>
+            <div class="code-name">.icon-expend
             </div>
           </li>
           
@@ -2276,6 +2370,22 @@
                 </svg>
                 <div class="name">sync</div>
                 <div class="code-name">#icon-sync</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#icon-undo"></use>
+                </svg>
+                <div class="name">undo</div>
+                <div class="code-name">#icon-undo</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#icon-redo"></use>
+                </svg>
+                <div class="name">redo</div>
+                <div class="code-name">#icon-redo</div>
             </li>
           
             <li class="dib">
@@ -3056,6 +3166,14 @@
           
             <li class="dib">
                 <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#icon-zoomout"></use>
+                </svg>
+                <div class="name">zoom out</div>
+                <div class="code-name">#icon-zoomout</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
                   <use xlink:href="#icon-audio"></use>
                 </svg>
                 <div class="name">audio</div>
@@ -3068,6 +3186,14 @@
                 </svg>
                 <div class="name">audio-fill</div>
                 <div class="code-name">#icon-audio-fill</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#icon-zoomin"></use>
+                </svg>
+                <div class="name">zoom in</div>
+                <div class="code-name">#icon-zoomin</div>
             </li>
           
             <li class="dib">
@@ -3172,6 +3298,22 @@
                 </svg>
                 <div class="name">eye-close</div>
                 <div class="code-name">#icon-eye-close</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#icon-icon-test"></use>
+                </svg>
+                <div class="name">1:1</div>
+                <div class="code-name">#icon-icon-test</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#icon-expend"></use>
+                </svg>
+                <div class="name">expend</div>
+                <div class="code-name">#icon-expend</div>
             </li>
           
             <li class="dib">
