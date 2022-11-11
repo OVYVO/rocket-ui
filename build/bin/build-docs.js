@@ -20,6 +20,7 @@ import '@src/fonts/iconfont.css'
 import icon from '@src/fonts/iconfont.json'
 import '../styles/index.less'
 
+import MessageBox from '@root/packages/message-box/src/main.js'
 {{componentInclude}}
 {{pluginInclude}}
 

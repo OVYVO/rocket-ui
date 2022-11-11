@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'iconfont'; /* Project id  */
-  src: url('iconfont.ttf?t=1665304409927') format('truetype');
+  font-family: 'iconfont'; /* Project id 3764737 */
+  src: url('iconfont.woff2?t=1668148513937') format('woff2'), url('iconfont.woff?t=1668148513937') format('woff'),
+    url('iconfont.ttf?t=1668148513937') format('truetype');
 }
 
 [class^='ro-icon-'],
@@ -101,36 +102,44 @@
   content: '\e790';
 }
 
-.ro-icon-message:before {
+.ro-icon-undo:before {
   content: '\e791';
 }
 
-.ro-icon-dashboard:before {
+.ro-icon-redo:before {
   content: '\e792';
 }
 
-.ro-icon-poweroff:before {
+.ro-icon-message:before {
   content: '\e793';
 }
 
-.ro-icon-piechart:before {
+.ro-icon-dashboard:before {
   content: '\e794';
 }
 
-.ro-icon-setting:before {
+.ro-icon-poweroff:before {
   content: '\e795';
 }
 
-.ro-icon-eye:before {
+.ro-icon-piechart:before {
   content: '\e796';
 }
 
-.ro-icon-location:before {
+.ro-icon-setting:before {
   content: '\e797';
 }
 
-.ro-icon-edit-square:before {
+.ro-icon-eye:before {
   content: '\e798';
+}
+
+.ro-icon-location:before {
+  content: '\e799';
+}
+
+.ro-icon-edit-square:before {
+  content: '\e79a';
 }
 
 .ro-icon-user:before {
@@ -489,12 +498,20 @@
   content: '\e88f';
 }
 
-.ro-icon-audio:before {
+.ro-icon-zoomout:before {
   content: '\e897';
 }
 
-.ro-icon-audio-fill:before {
+.ro-icon-audio:before {
   content: '\e898';
+}
+
+.ro-icon-audio-fill:before {
+  content: '\e899';
+}
+
+.ro-icon-zoomin:before {
+  content: '\e89a';
 }
 
 .ro-icon-bug-fill:before {
@@ -547,6 +564,14 @@
 
 .ro-icon-eye-close:before {
   content: '\e900';
+}
+
+.ro-icon-icon-test:before {
+  content: '\e912';
+}
+
+.ro-icon-expend:before {
+  content: '\e914';
 }
 
 .ro-icon-send:before {
