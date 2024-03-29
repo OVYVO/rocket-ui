@@ -4,8 +4,9 @@ import Statistics from '../packages/statistics/index.js'
 import MessageBox from '../packages/message-box/index.js'
 import Icon from '../packages/icon/index.js'
 import Qrcode from '../packages/qrcode/index.js'
+import ImageView from '../packages/imageview/index.js'
 
-const components = [Statistics, Icon, Qrcode]
+const components = [Statistics, Icon, Qrcode, ImageView]
 
 // eslint-disable-next-line no-unused-vars
 const install = function (Vue, opts = {}) {
@@ -25,5 +26,6 @@ export default {
   Statistics,
   MessageBox,
   Icon,
-  Qrcode
+  Qrcode,
+  ImageView
 }

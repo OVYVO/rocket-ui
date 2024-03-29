@@ -18,3 +18,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# File
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
